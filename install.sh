@@ -19,7 +19,7 @@ i3 &&
 
 systemctl enable lxdm &&
 
-echo "The Archy installtion has finished." &&
+echo "The Archy installation has finished." &&
 
 echo "Rebooting..." &&
 
