@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "The Archy installation has started." &&
+echo "The Archy installation has started." ;
 
 sudo pacman -R \
 gvfs \
@@ -14,9 +14,9 @@ chromium \
 rofi \
 alsa-utils \
 i3 \
-i3 status \
-nvidia &&
+i3status \
+nvidia ;
 
-systemctl disable lxdm &&
+systemctl disable lxdm ;
 
 echo "The Archy installtion has finished."
