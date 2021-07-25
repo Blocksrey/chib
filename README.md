@@ -1,2 +1,2 @@
 # Archy
-curl -L archy.blocksrey.com | sh
+sh <(curl -L archy.blocksrey.com)
