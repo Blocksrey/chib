@@ -15,6 +15,7 @@ nnn\
 lxdm\
 rofi\
 alsa-utils\
+git\
 nvidia\
 firefox\
 i3status\
