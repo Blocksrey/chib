@@ -1,22 +1,22 @@
 #!/bin/sh
 
-echo "The Archy installation has started." ;
+echo "The Archy installation has started.";
 
 sudo pacman -R \
-gvfs \
-ntfs-3g \
-thunar \
-alacritty \
-lxdm \
 noto-fonts-cjk \
 noto-fonts-emoji \
-chromium \
+alacritty \
+ntfs-3g \
+gvfs \
+thunar \
+lxdm \
 rofi \
 alsa-utils \
-i3 \
+nvidia \
+chromium \
 i3status \
-nvidia ;
+i3 $$
 
-systemctl disable lxdm ;
+systemctl disable lxdm;
 
 echo "The Archy installtion has finished."
