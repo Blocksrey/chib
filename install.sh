@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Ah shit, here we go again...
+echo "The Archy installation has started." &&
 
-echo "The Archy installation has started.";
-
-# Dewit
 sudo pacman -S \
 noto-fonts-cjk \
 noto-fonts-emoji \
@@ -20,11 +17,10 @@ chromium \
 i3status \
 i3 &&
 
-# Enable lxdm service
-systemctl enable lxdm;
+systemctl enable lxdm &&
 
-echo "The Archy installtion has finished.";
+echo "The Archy installtion has finished." &&
 
-echo "Rebooting...";
+echo "Rebooting..." &&
 
-reboot;
+reboot
