@@ -5,7 +5,7 @@
 echo "The Archy installation has started.";
 
 # Dewit
-sudo pacman -R \
+sudo pacman -S \
 noto-fonts-cjk \   # Fonts
 noto-fonts-emoji \ # ^
 alacritty \        # Terminal
@@ -21,11 +21,11 @@ i3status \         # Window manager
 i3 &&              # ^
 
 # Enable lxdm service
-systemctl disable lxdm;
+systemctl enable lxdm;
 
 echo "The Archy installtion has finished.";
 
-echo "Please reboot for changes.";
+echo "Please reboot to correct state.";
 
 # echo "Rebooting...";
 
