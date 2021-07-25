@@ -2,7 +2,7 @@
 
 echo "The Archy installation has started." &&
 
-sudo pacman -S \
+sudo pacman -R \
 gvfs \
 ntfs-3g \
 thunar \
@@ -17,6 +17,6 @@ i3 \
 i3 status \
 nvidia &&
 
-systemctl enable lxdm &&
+systemctl disable lxdm &&
 
 echo "The Archy installtion has finished."
