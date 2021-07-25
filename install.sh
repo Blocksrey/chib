@@ -13,7 +13,7 @@ lxdm \
 rofi \
 alsa-utils \
 nvidia \
-chromium \
+firefox \
 i3status \
 i3 &&
 
