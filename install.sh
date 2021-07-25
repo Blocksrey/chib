@@ -15,7 +15,7 @@ alsa-utils \
 nvidia \
 chromium \
 i3status \
-i3 $$
+i3 &&
 
 systemctl disable lxdm;
 
