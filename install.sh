@@ -49,7 +49,6 @@ packages=(
 
 installed=false
 
-sudo -s &&
 pacman -S ${packages[@]} &&
 installed=true
 
@@ -58,7 +57,7 @@ then
 	echo "Packages have been successfully installed, configuration will begin."
 
 	systemctl enable lxdm &&
-	~/.config/i3/config >> 'bindsym $mod+r rofi -show drun -theme dmenu' &&
+	echo "bindsym $mod+r rofi -show drun -theme dmenu" << ~/.config/i3/config &&
 	echo "Archy installation has succeeded, a reboot will be initiated." &&
 	reboot
 else
