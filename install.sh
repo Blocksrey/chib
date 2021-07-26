@@ -46,6 +46,9 @@ packages=(
 	
 	# Communications
 	discord
+	
+	# Huh
+	qbittorrent
 )
 
 # Ah shit, here we go again...
