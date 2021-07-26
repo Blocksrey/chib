@@ -49,7 +49,7 @@ packages=(
 
 installed=false
 
-sudo -s $$
+sudo -s &&
 pacman -S ${packages[@]} &&
 installed=true
 
