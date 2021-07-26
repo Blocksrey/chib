@@ -15,7 +15,6 @@ packages=(
 	# File management
 	p7zip
 	nnn
-	gvfs
 	ntfs-3g
 
 	# Terminal emulation
