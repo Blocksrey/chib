@@ -48,7 +48,10 @@ packages=(
 # Ah shit, here we go again...
 
 installed=false
-pacman -S ${packages[@]} && installed=true
+
+sudo -s $$
+pacman -S ${packages[@]} &&
+installed=true
 
 if $installed
 then
