@@ -39,7 +39,7 @@ packages=(
 
 	# Window manager
 	i3status
-	i3
+	i3-wm
 
 	# Video player
 	mpv
