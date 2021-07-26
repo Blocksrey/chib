@@ -57,7 +57,7 @@ then
 	echo "Packages have been successfully installed, configuration will begin."
 
 	systemctl enable lxdm &&
-	echo 'bindsym \$mod+r rofi -show drun -theme dmenu' << ~/.config/i3/config &&
+	echo "bindsym \$mod+r rofi -show drun -theme dmenu" << ~/.config/i3/config &&
 	echo "Archy installation has succeeded, a reboot will be initiated." &&
 	reboot
 else
