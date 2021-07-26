@@ -43,6 +43,9 @@ packages=(
 
 	# Video player
 	mpv
+	
+	# Communications
+	discord
 )
 
 # Ah shit, here we go again...
