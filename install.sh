@@ -44,6 +44,8 @@ packages=(
 	
 	# Huh
 	qbittorrent
+	gimp
+	steam
 )
 
 # Ah shit, here we go again...
