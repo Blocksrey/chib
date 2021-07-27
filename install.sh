@@ -8,13 +8,15 @@
 packages=(
 	# Development
 	git
-	cmake
 	make
+	cmake
 	gcc
+	LuaJIT
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
-	nano
+	sublime-text3
+	sublime-merge
   
 	# File management
 	p7zip
@@ -38,10 +40,13 @@ packages=(
 	firefox
 
 	# Window manager
-	dwm
+	i3status
+	i3
 
-	# Video player
+	# Media
 	mpv
+	youtube-dl
+	ffmpeg
 	
 	# Huh
 	qbittorrent
@@ -61,7 +66,7 @@ then
 	
 	cd /home/* &&
 	echo "bindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
-	echo "exec dwm" > .xinitrc &&
+	echo "exec i3" > .xinitrc &&
 	echo "Voidy configuration has completed, a reboot will be initiated." &&
 	reboot
 else
