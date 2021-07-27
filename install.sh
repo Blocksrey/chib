@@ -9,11 +9,11 @@ packages=(
 	# Development
 	git
 	cmake
-  make
-  gcc
-  SDL2-devel
-  SDL2_image-devel
-  SDL2_ttf-devel
+	make
+	gcc
+	SDL2-devel
+	SDL2_image-devel
+	SDL2_ttf-devel
   
 	# File management
 	p7zip
@@ -57,7 +57,7 @@ if $installed
 then
 	echo "Packages have been successfully installed, configuration will begin."
   
-  echo "bindsym \$mod+o exec rofi -show drun" >> ~/.config/i3/config &&
+	echo "bindsym \$mod+o exec rofi -show drun" >> ~/.config/i3/config &&
 	echo "Voidy configuration has completed, a reboot will be initiated." &&
 	reboot
 else
