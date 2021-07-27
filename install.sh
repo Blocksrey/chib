@@ -31,13 +31,13 @@ packages=(
 
 	# Drivers
 	alsa-utils
+	xorg
 
 	# Web browsing
 	firefox
 
 	# Window manager
-	i3status
-	i3
+	dwm
 
 	# Video player
 	mpv
@@ -59,7 +59,7 @@ then
 	echo "Packages have been successfully installed, configuration will begin."
 	
 	cd /home/* &&
-	echo "exec i3" > .xinitrc &&
+	echo "exec dwm" > .xinitrc &&
 	echo "bindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 	echo "Voidy configuration has completed, a reboot will be initiated." &&
 	reboot
