@@ -1,2 +1,2 @@
-arch text diff=bash
-void text diff=bash
+arch text diff=sh
+void text diff=sh
