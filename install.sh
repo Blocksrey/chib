@@ -15,8 +15,6 @@ packages=(
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
-	sublime-text3
-	sublime-merge
   
 	# File management
 	p7zip
