@@ -48,6 +48,7 @@ packages=(
 	# Huh
 	qbittorrent
 	gimp
+	flatpak
 )
 
 # Ah shit, here we go again...
