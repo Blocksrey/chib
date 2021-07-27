@@ -27,8 +27,6 @@ packages=(
 
 	# Language
 	font-hanazono
-	fcitx
-	fcitx-mozc
 
 	# Application launcher
 	rofi
