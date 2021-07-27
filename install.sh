@@ -26,9 +26,7 @@ packages=(
 	alacritty
 
 	# Langauge
-	anthy
-	anthy-unicode
-	ibus-anthy
+	font-hanazono
 	
 	# Application launcher
 	rofi
