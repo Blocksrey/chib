@@ -48,7 +48,6 @@ packages=(
 	# Huh
 	qbittorrent
 	gimp
-	flatpak
 )
 
 # Ah shit, here we go again...
@@ -62,9 +61,11 @@ if $installed
 then
 	echo "Packages have been successfully installed, configuration will begin."
 	
+	startx
+	
 	cd /home/* &&
-	echo "bindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 	echo "exec i3" > .xinitrc &&
+	echo "bindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 	echo "Voidy configuration has completed, a reboot will be initiated." &&
 	reboot
 	
