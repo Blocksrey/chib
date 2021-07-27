@@ -25,10 +25,11 @@ packages=(
 	# Terminal emulation
 	alacritty
 
-	# Fonts
-	noto-fonts-cjk
-	noto-fonts-emoji
-
+	# Langauge
+	anthy
+	anthy-unicode
+	ibus-anthy
+	
 	# Application launcher
 	rofi
 
