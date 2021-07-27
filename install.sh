@@ -68,6 +68,8 @@ then
 	echo "exec i3" > .xinitrc &&
 	echo "Voidy configuration has completed, a reboot will be initiated." &&
 	reboot
+	
+	echo "Voidy configuration failed! Please try again."
 else
 	echo "Voidy installation has failed, glhf."
 fi
