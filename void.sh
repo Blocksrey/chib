@@ -55,7 +55,7 @@ packages=(
 echo "Package installation will begin." &&
 
 # Package installation
-xbps-install -y -S void-repo-nonfree &&
+xbps-install -y -S void-repo-nonfree && sleep 1 &&
 xbps-install -y ${packages[@]} &&
 
 echo "Packages have been successfully installed." &&
