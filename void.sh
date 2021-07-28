@@ -15,7 +15,7 @@ packages=(
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
-  
+
 	# File management
 	p7zip
 
@@ -27,7 +27,7 @@ packages=(
 
 	# Web browser
 	firefox
-	
+
 	# Display manager
 	sddm
 
@@ -38,7 +38,7 @@ packages=(
 	mpv
 	youtube-dl
 	ffmpeg
-	
+
 	# Huh
 	qbittorrent
 	gimp
