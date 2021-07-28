@@ -21,7 +21,7 @@ packages=(
 	nnn
 
 	# Terminal emulation
-	# alacritty
+	foot
 
 	# Language
 	# font-hanazono
