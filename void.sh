@@ -21,19 +21,20 @@ packages=(
 	nnn
 
 	# Terminal emulation
-	alacritty
+	# alacritty
 
 	# Language
-	font-hanazono
+	# font-hanazono
 
 	# Application launcher
-	rofi
+	# rofi
 
 	# Drivers
 	nvidia
 	wayland
 	xorg-server-xwayland
 	alsa-utils
+	dbus
 
 	# Web browsing
 	firefox
@@ -42,26 +43,30 @@ packages=(
 	gnome
 
 	# Media
-	mpv
-	youtube-dl
-	ffmpeg
+	# mpv
+	# youtube-dl
+	# ffmpeg
 	
 	# Huh
-	qbittorrent
-	gimp
+	# qbittorrent
+	# gimp
 )
 
 # Ah shit, here we go again...
 echo "Package installation will begin." &&
 
 # Package installation
-xbps-install -y -S void-repo-nonfree && sleep 1 &&
+xbps-install -y -S void-repo-nonfree &&
+sleep 1 &&
 xbps-install -y ${packages[@]} &&
 
 echo "Packages have been successfully installed." &&
 
 # Configuration stage
 echo "Configuration will now begin." &&
+
+ln -s /etc/sv/dbus/ /var/service &&
+ln -s /etc/sv/sddm/ /var/service &&
 
 # Nvidia configuration
 sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
