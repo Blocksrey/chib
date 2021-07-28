@@ -68,11 +68,13 @@ echo "Packages have been successfully installed." &&
 # Configuration stage
 echo "Configuration will now begin." &&
 
-cd /home/* &&
+sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+#grub-mkconfig -o /boot/grub/grub.cfg &&
+# cd /home/* &&
 
 echo "Voidy configuration has completed, a reboot will be initiated." &&
 
-reboot ||
+# reboot ||
 
 
 # Failure
