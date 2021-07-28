@@ -20,7 +20,7 @@ packages=(
 	p7zip
 	nnn
 
-	# Terminal emulation
+	# Terminal emulator
 	foot
 
 	# Language
@@ -36,10 +36,14 @@ packages=(
 	alsa-utils
 	dbus
 
-	# Web browsing
+	# Web browser
 	firefox
+	
+	# Display manager
+	sddm
 
 	# Window manager
+	hikari
 	gnome
 
 	# Media
