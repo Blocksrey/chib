@@ -39,8 +39,7 @@ packages=(
 	firefox
 
 	# Window manager
-	i3status
-	i3
+	gnome
 
 	# Media
 	mpv
@@ -53,24 +52,28 @@ packages=(
 )
 
 # Ah shit, here we go again...
+echo "Package installation will begin." &&
 
-installed=false
+installed=false &&
 
+# Package installation
 xbps-install -S void-repo-nonfree &&
 xbps-install ${packages[@]} &&
-installed=true
 
-if $installed
-then
-	echo "Packages have been successfully installed, configuration will begin."
-	
-	cd /home/* &&
-	echo "exec i3" > .xinitrc &&
-	echo "bindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
-	echo "Voidy configuration has completed, a reboot will be initiated." &&
-	reboot
-	
-	echo "Voidy configuration failed! Please try again."
-else
-	echo "Voidy installation has failed, glhf."
-fi
+installed=true &&
+
+echo "Packages have been successfully installed." &&
+
+
+# Configuration stage
+echo "Configuration will now begin." &&
+
+cd /home/* &&
+
+echo "Voidy configuration has completed, a reboot will be initiated." &&
+
+reboot ||
+
+
+# Failure
+echo "Voidy installation has failed, glhf."
