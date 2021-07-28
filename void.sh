@@ -54,27 +54,24 @@ packages=(
 # Ah shit, here we go again...
 echo "Package installation will begin." &&
 
-installed=false &&
-
 # Package installation
 xbps-install -S void-repo-nonfree &&
 xbps-install ${packages[@]} &&
 
-installed=true &&
-
 echo "Packages have been successfully installed." &&
-
 
 # Configuration stage
 echo "Configuration will now begin." &&
 
+# Nvidia configuration
 sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
-#grub-mkconfig -o /boot/grub/grub.cfg &&
+grub-mkconfig -o /boot/grub/grub.cfg &&
+
 # cd /home/* &&
 
 echo "Voidy configuration has completed, a reboot will be initiated." &&
 
-# reboot ||
+reboot ||
 
 
 # Failure
