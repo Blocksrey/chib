@@ -30,8 +30,9 @@ packages=(
 	rofi
 
 	# Drivers
+	nvidia
 	alsa-utils
-	xorg
+	wayland
 
 	# Web browsing
 	firefox
@@ -54,14 +55,13 @@ packages=(
 
 installed=false
 
+xbps-install -S void-repo-nonfree &&
 xbps-install ${packages[@]} &&
 installed=true
 
 if $installed
 then
 	echo "Packages have been successfully installed, configuration will begin."
-	
-	startx
 	
 	cd /home/* &&
 	echo "exec i3" > .xinitrc &&
