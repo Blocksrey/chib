@@ -31,8 +31,9 @@ packages=(
 
 	# Drivers
 	nvidia
-	alsa-utils
 	wayland
+	xorg-server-xwayland
+	alsa-utils
 
 	# Web browsing
 	firefox
