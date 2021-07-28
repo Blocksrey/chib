@@ -65,6 +65,9 @@ echo "Packages have been successfully installed." &&
 # Configuration stage
 echo "Configuration will now begin." &&
 
+# Hikari configuration
+sed -i 's/"$TERMINAL"/foot/g' /etc/hikari/hikari.conf &&
+
 # Services
 echo "Enabling services..." &&
 ln -s /etc/sv/dbus/ /var/service &&
@@ -73,9 +76,6 @@ ln -s /etc/sv/sddm/ /var/service &&
 # Nvidia configuration
 sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
-
-# Hikari config
-sed -i 's/"$TERMINAL"/foot/g' /etc/hikari/hikari.conf &&
 
 # cd /home/* &&
 echo "Voidy configuration has completed, a reboot will be initiated." &&
