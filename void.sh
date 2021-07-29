@@ -38,6 +38,9 @@ packages=(
 	# Program launcher
 	rofi
 
+	# Files
+	nnn
+
 	# Media
 	# mpv
 	# youtube-dl
