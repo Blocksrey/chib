@@ -15,6 +15,7 @@ packages=(
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
+	sublime-text3
 
 	# File management
 	p7zip
@@ -22,11 +23,8 @@ packages=(
 	# Drivers
 	nvidia
 	alsa-utils
-xorg-apps
-xorg-input-drivers
-
+	wayland
 	dbus
-	# wayland
 
 	# Web browser
 	firefox
@@ -35,23 +33,16 @@ xorg-input-drivers
 	sddm
 
 	# Window manager
-	i3status
-	i3
-
-	# Program launcher
-	rofi
-
-	# Files
-	nnn
+	gnome
 
 	# Media
-	# mpv
-	# youtube-dl
-	# ffmpeg
+	mpv
+	youtube-dl
+	ffmpeg
 
 	# Huh
-	# qbittorrent
-	# gimp
+	qbittorrent
+	gimp
 )
 
 # Ah shit, here we go again...
