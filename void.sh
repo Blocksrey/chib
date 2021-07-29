@@ -22,6 +22,9 @@ packages=(
 	# Drivers
 	nvidia
 	alsa-utils
+xorg-apps
+xorg-input-drivers
+
 	# dbus
 	# wayland
 
@@ -65,7 +68,7 @@ echo "Configuration will now begin." &&
 
 # Services
 echo "Enabling services..." &&
-# ln -s /etc/sv/dbus/ /var/service &&
+ln -s /etc/sv/dbus/ /var/service &&
 ln -s /etc/sv/sddm/ /var/service &&
 
 # Nvidia configuration
