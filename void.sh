@@ -25,7 +25,7 @@ packages=(
 xorg-apps
 xorg-input-drivers
 
-	# dbus
+	dbus
 	# wayland
 
 	# Web browser
