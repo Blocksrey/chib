@@ -21,9 +21,9 @@ packages=(
 
 	# Drivers
 	nvidia
-	wayland
 	alsa-utils
-	dbus
+	# dbus
+	# wayland
 
 	# Web browser
 	firefox
@@ -32,25 +32,28 @@ packages=(
 	sddm
 
 	# Window manager
-	gnome
+	i3status
+	i3
+
+	# Program launcher
+	rofi
 
 	# Media
-	mpv
-	youtube-dl
-	ffmpeg
+	# mpv
+	# youtube-dl
+	# ffmpeg
 
 	# Huh
-	qbittorrent
-	gimp
+	# qbittorrent
+	# gimp
 )
 
 # Ah shit, here we go again...
 echo "Package installation will begin." &&
 
 # Package installation
-xbps-install -y -S void-repo-nonfree &&
-sleep 1 &&
-xbps-install -y ${packages[@]} &&
+xbps-install -y void-repo-nonfree &&
+xbps-install -S -y ${packages[@]} &&
 
 echo "Packages have been successfully installed." &&
 
@@ -59,7 +62,7 @@ echo "Configuration will now begin." &&
 
 # Services
 echo "Enabling services..." &&
-ln -s /etc/sv/dbus/ /var/service &&
+# ln -s /etc/sv/dbus/ /var/service &&
 ln -s /etc/sv/sddm/ /var/service &&
 
 # Nvidia configuration
