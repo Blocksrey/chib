@@ -8,62 +8,73 @@
 packages=(
 	# Development
 	git
+	make
 	cmake
+	gcc
+	luajit
+	sdl2
+	sdl2_image
+	sdl2_ttf
 
 	# File management
 	p7zip
-	nnn
-	ntfs-3g
-
-	# Terminal emulation
-	alacritty
-
-	# Fonts
-	noto-fonts-cjk
-	noto-fonts-emoji
-
-	# Display manager
-	lxdm
-
-	# Application launcher
-	rofi
 
 	# Drivers
-	alsa-utils
 	nvidia
+	alsa-utils
+	wayland
+	xorg-xwayland
+	egl-wayland
+	dbus
 
-	# Web browsing
+	# Terminal emulator
+	alacritty
+
+	# Web browser
 	firefox
 
-	# Window manager
-	i3status
-	i3-wm
+	# Display manager
+	sddm
 
-	# Video player
-	mpv
-	
-	# Communications
-	discord
-	
+	# Window manager
+	gnome
+
+	# Fonts
+	# noto-fonts-cjk
+	# noto-fonts-emoji
+
+	# Media
+	# mpv
+	# youtube-dl
+	# ffmpeg
+
 	# Huh
-	qbittorrent
+	# qbittorrent
+	# gimp
 )
 
 # Ah shit, here we go again...
+echo "Package installation will begin." &&
 
-installed=false
-
+# Package installation
 pacman -S ${packages[@]} &&
-installed=true
 
-if $installed
-then
-	echo "Packages have been successfully installed, configuration will begin."
+echo "Packages have been successfully installed." &&
 
-	systemctl enable lxdm &&
-	echo "bindsym \$mod+o exec rofi -show drun" >> ~/.config/i3/config &&
-	echo "Archy installation has succeeded, a reboot will be initiated." &&
-	reboot
-else
-	echo "Archy installation has failed, glhf."
-fi
+# Configuration stage
+echo "Configuration will now begin." &&
+
+# Services
+echo "Enabling services..." &&
+systemctl enable dbus &&
+systemctl enable sddm &&
+
+# Nvidia configuration
+#sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+
+echo "Archy configuration has completed, a reboot will be initiated." &&
+
+reboot ||
+
+# Failure
+echo "Archy installation has failed, glhf."
