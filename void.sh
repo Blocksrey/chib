@@ -35,6 +35,10 @@ packages=(
 	# Window manager
 	gnome
 
+	# Fonts
+	noto-fonts-cjk
+	noto-fonts-emoji
+
 	# Media
 	mpv
 	youtube-dl
