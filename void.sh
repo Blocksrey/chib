@@ -24,6 +24,7 @@ packages=(
 	nvidia
 	alsa-utils
 	dbus
+	xorg
 
 	# Web browser
 	firefox
@@ -38,8 +39,6 @@ packages=(
 	rofi
 
 	# Window manager
-	i3
-	i3status
 	awesome
 
 	# Fonts
