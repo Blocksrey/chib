@@ -1,11 +1,11 @@
+# Other prerequisites
+xbps-install -Sy curl git wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
+
 # EGL headers
 curl -s https://www.khronos.org/registry/EGL/api/EGL/egl.h --output /usr/include/EGL/egl.h &&
 curl -s https://www.khronos.org/registry/EGL/api/EGL/eglext.h --output /usr/include/EGL/eglext.h &&
 curl -s https://www.khronos.org/registry/EGL/api/EGL/eglplatform.h --output /usr/include/EGL/eglplatform.h &&
 curl -s https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h --output /usr/include/KHR/khrplatform.h &&
-
-# Other prerequisites
-xbps-install -Sy wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
 
 # EGL External Platform installation
 git clone https://github.com/NVIDIA/eglexternalplatform.git &&
