@@ -31,11 +31,15 @@ packages=(
 	# Display manager
 	sddm
 
+# Terminal
+alacritty
+
 	# Launcher
 	rofi
 
 	# Window manager
-	gnome
+i3
+	i3status
 
 	# Fonts
 	noto-fonts-cjk
