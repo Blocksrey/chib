@@ -48,8 +48,7 @@ packages=(
 	nautilus
 
 	# Window manager
-	i3status
-	i3
+	gnome
 
 	# Media
 	mpv
