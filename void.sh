@@ -86,7 +86,7 @@ ln -s /etc/sv/sddm /var/service/ &&
 
 # Nvidia
 echo "Enabling Nvidia modeset..." &&
-sed -i 's/loglevel=4/rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
+sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
 
