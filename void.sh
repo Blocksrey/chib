@@ -28,6 +28,10 @@ packages=(
 	alsa-utils
 	dbus
 
+xorg-server
+xorg-video-drivers
+xorg-input-drivers
+
 	# Web browser
 	firefox
 
