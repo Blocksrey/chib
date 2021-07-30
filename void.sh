@@ -68,7 +68,7 @@ xbps-install -Suy void-repo-nonfree &&
 xbps-install -Suy ${packages[@]} &&
 
 # EGL Wayland
-./egl-wayland-install.sh &&
+bash egl-wayland-install.sh &&
 
 
 # Sazanami font
