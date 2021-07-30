@@ -8,14 +8,17 @@
 packages=(
 	# Development
 	git
+
+	# Compilers and interpreters
 	make
 	cmake
 	gcc
 	LuaJIT
+
+	# Libraries
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
-	sublime-text3
 
 	# File management
 	p7zip
@@ -38,21 +41,24 @@ packages=(
 	# Launcher
 	rofi
 
-	# Window manager
-	awesome
+	# File
+	ntfs-3g
+	nnn
+	nautilis
 
-	# Fonts
-	# noto-fonts-cjk
-	# noto-fonts-emoji
+	# Window manager
+	i3status
+	i3
 
 	# Media
-	# mpv
-	# youtube-dl
-	# ffmpeg
+	mpv
+	youtube-dl
+	ffmpeg
 
 	# Huh
-	# qbittorrent
-	# gimp
+	qbittorrent
+	audacity
+	gimp
 )
 
 # Packages
@@ -60,15 +66,29 @@ echo "Installing packages..." &&
 xbps-install -Suy void-repo-nonfree &&
 xbps-install -Suy ${packages[@]} &&
 
+# Sazanami font
+echo "Installing sazanami fonts..." &&
+7z x sazanami-20040629.tar.bz2 &&
+7z x sazanami-20040629.tar &&
+cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/
+
 # Services
 echo "Enabling services..." &&
 ln -s /etc/sv/dbus /var/service/ &&
 ln -s /etc/sv/sddm /var/service/ &&
 
 # Nvidia
-# echo "Enabling Nvidia modeset..." &&
-# sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
-# grub-mkconfig -o /boot/grub/grub.cfg &&
+echo "Enabling Nvidia modeset..." &&
+sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+grub-mkconfig -o /boot/grub/grub.cfg &&
+
+# Clean
+rm -r ../inity.sh &&
+
+# i3
+echo "Configuring i3..."
+cd /home/* &&
+printf "\nbindsym $mod+o rofi -show drun" >> .config/i3/config &&
 
 # Reboot
 echo "Rebooting..." &&
