@@ -89,6 +89,7 @@ ln -s /etc/sv/sddm /var/service/ &&
 
 
 # Nvidia
+mkdir /etc/modprob.d &&
 echo "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
