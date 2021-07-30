@@ -23,7 +23,6 @@ packages=(
 	# Drivers
 	nvidia
 	alsa-utils
-	wayland
 	dbus
 
 	# Web browser
@@ -31,6 +30,9 @@ packages=(
 
 	# Display manager
 	sddm
+
+	# Launcher
+	rofi
 
 	# Window manager
 	gnome
@@ -49,30 +51,24 @@ packages=(
 	gimp
 )
 
-# Ah shit, here we go again...
-echo "Package installation will begin." &&
-
-# Package installation
+# Packages
+echo "Installing packages..." &&
 xbps-install -Suy void-repo-nonfree &&
 xbps-install -Suy ${packages[@]} &&
 
-echo "Packages have been successfully installed." &&
-
-# Configuration stage
-echo "Configuration will now begin." &&
-
 # Services
 echo "Enabling services..." &&
-ln -s /etc/sv/dbus/ /var/service &&
-ln -s /etc/sv/sddm/ /var/service &&
+ln -s /etc/sv/dbus /var/service/ &&
+ln -s /etc/sv/sddm /var/service/ &&
 
-# Nvidia configuration
-sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
-grub-mkconfig -o /boot/grub/grub.cfg &&
+# Nvidia
+# echo "Enabling Nvidia modeset..." &&
+# sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+# grub-mkconfig -o /boot/grub/grub.cfg &&
 
-echo "Voidy configuration has completed, a reboot will be initiated." &&
-
+# Reboot
+echo "Rebooting..." &&
 reboot ||
 
-# Failure
-echo "Voidy installation has failed, glhf."
+# Fail
+echo "Installation failed, glhf."
