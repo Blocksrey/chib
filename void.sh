@@ -67,12 +67,15 @@ echo "Installing packages..." &&
 xbps-install -Suy void-repo-nonfree &&
 xbps-install -Suy ${packages[@]} &&
 
+# EGL Wayland
+./egl-wayland-install.sh &&
+
 
 # Sazanami font
 echo "Installing sazanami fonts..." &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
-cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/
+cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 
 # Services
@@ -85,16 +88,6 @@ ln -s /etc/sv/sddm /var/service/ &&
 echo "Enabling Nvidia modeset..." &&
 sed -i 's/loglevel=4/rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
-
-## Backup old initramfs nvidia-nomodeset image ##
-mv /boot/initrd.img-$(uname -r) /boot/initrd.img-$(uname -r)-nvidia-nomodeset.img
-
-## Generate new initramfs image ##
-dracut -q /boot/initrd.img-$(uname -r) $(uname -r)
-
-
-# Clean
-rm -r ../inity.sh &&
 
 
 # i3
