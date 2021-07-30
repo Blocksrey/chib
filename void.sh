@@ -42,17 +42,17 @@ i3
 	i3status
 
 	# Fonts
-	noto-fonts-cjk
-	noto-fonts-emoji
+	# noto-fonts-cjk
+	# noto-fonts-emoji
 
 	# Media
-	mpv
-	youtube-dl
-	ffmpeg
+	# mpv
+	# youtube-dl
+	# ffmpeg
 
 	# Huh
-	qbittorrent
-	gimp
+	# qbittorrent
+	# gimp
 )
 
 # Packages
