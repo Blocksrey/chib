@@ -38,6 +38,7 @@ packages=(
 	xorg-server
 	xorg-video-drivers
 	xorg-input-drivers
+	xorg-apps
 
 	# Web browser
 	firefox
@@ -58,6 +59,8 @@ packages=(
 
 	# Window manager
 	gnome
+	i3
+	i3status
 
 	# Media
 	mpv
