@@ -4,6 +4,7 @@
 # however feel free to use it as you'd like.     #
 ##################################################
 
+
 # Package list
 packages=(
 	# Development
@@ -64,10 +65,12 @@ xorg-input-drivers
 	gimp
 )
 
+
 # Packages
 echo "Installing packages..." &&
 xbps-install -Suy void-repo-nonfree &&
 xbps-install -Suy ${packages[@]} &&
+
 
 # Sazanami font
 echo "Installing sazanami fonts..." &&
@@ -75,27 +78,39 @@ echo "Installing sazanami fonts..." &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/
 
+
 # Services
 echo "Enabling services..." &&
 ln -s /etc/sv/dbus /var/service/ &&
 ln -s /etc/sv/sddm /var/service/ &&
 
+
 # Nvidia
 echo "Enabling Nvidia modeset..." &&
-sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+sed -i 's/loglevel=4/rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
+
+## Backup old initramfs nvidia-nomodeset image ##
+mv /boot/initrd.img-$(uname -r) /boot/initrd.img-$(uname -r)-nvidia-nomodeset.img
+
+## Generate new initramfs image ##
+dracut -q /boot/initrd.img-$(uname -r) $(uname -r)
+
 
 # Clean
 rm -r ../inity.sh &&
+
 
 # i3
 # echo "Configuring i3..." &&
 # cd /home/* &&
 # printf "\nbindsym $mod+o rofi -show drun" >> .config/i3/config &&
 
+
 # Reboot
 echo "Rebooting..." &&
 reboot ||
+
 
 # Fail
 echo "Installation failed, glhf."
