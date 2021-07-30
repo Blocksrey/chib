@@ -89,9 +89,9 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 rm -r ../inity.sh &&
 
 # i3
-echo "Configuring i3..." &&
-cd /home/* &&
-printf "\nbindsym $mod+o rofi -show drun" >> .config/i3/config &&
+# echo "Configuring i3..." &&
+# cd /home/* &&
+# printf "\nbindsym $mod+o rofi -show drun" >> .config/i3/config &&
 
 # Reboot
 echo "Rebooting..." &&
