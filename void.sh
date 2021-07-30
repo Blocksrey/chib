@@ -76,6 +76,7 @@ bash egl-wayland-install.sh &&
 
 # Sazanami font
 echo "Installing sazanami fonts..." &&
+mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
