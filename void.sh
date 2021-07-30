@@ -44,7 +44,7 @@ packages=(
 	# File
 	ntfs-3g
 	nnn
-	nautilis
+	nautilus
 
 	# Window manager
 	i3status
