@@ -27,7 +27,6 @@ packages=(
 	nvidia
 	alsa-utils
 	dbus
-	xorg
 
 	# Web browser
 	firefox
