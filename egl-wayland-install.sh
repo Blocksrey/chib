@@ -1,5 +1,5 @@
 # Other prerequisites
-xbps-install -Sy curl git gcc wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
+xbps-install -Sy curl git gcc libX11-devel wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
 
 # EGL headers
 mkdir /usr/include/EGL /usr/include/KHR
