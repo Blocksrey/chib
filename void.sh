@@ -33,10 +33,11 @@ packages=(
 	libxcb
 	linux-headers
 
-xauth
-xorg-server
-xorg-video-drivers
-xorg-input-drivers
+	# Xorg
+	xauth
+	xorg-server
+	xorg-video-drivers
+	xorg-input-drivers
 
 	# Web browser
 	firefox
