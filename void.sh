@@ -89,22 +89,17 @@ echo "Enabling Nvidia modeset..." &&
 sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
+# Update GDM rules
+sed -i "s/DRIVER/#DRIVER/g" /usr/lib/udev/rules.d/61-gdm.rules &&
 
-#Update /usr/lib/udev/rules.d/61-gdm.rules
-#
-#
-#
+# Backup old initramfs nvidia-nomodeset image
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-old.img &&
 
-
-## Backup old initramfs nvidia-nomodeset image ##
-mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-old.img
-
-## Generate new initramfs image ##
-dracut -q /boot/initramfs-$(uname -r).img $(uname -r)
-
+# Generate new initramfs image
+dracut -q /boot/initramfs-$(uname -r).img $(uname -r) &&
 
 # Enable kms-modifiers
-gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"]
+gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
 
 # i3
