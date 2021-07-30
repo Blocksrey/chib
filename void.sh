@@ -28,10 +28,7 @@ packages=(
 	nvidia
 	alsa-utils
 	dbus
-
-xorg-server
-xorg-video-drivers
-xorg-input-drivers
+	wayland
 
 	# Web browser
 	firefox
