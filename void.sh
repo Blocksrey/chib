@@ -20,25 +20,26 @@ packages=(
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
+	#libxcb
 
 	# File management
 	p7zip
+	ntfs-3g
+	#nnn
 
 	# Drivers
 	nvidia
 	alsa-utils
 	dbus
-	#wayland
-	
-	#libxcb
 	#linux-headers
 
-	# Xorg
+	# Compositors
 	xauth
 	xorg-server
-	xorg-video-drivers
 	xorg-input-drivers
+	xorg-video-drivers
 	xorg-apps
+	#wayland
 	#xorg-server-xwayland
 
 	# Web browser
@@ -50,18 +51,13 @@ packages=(
 	# Terminal
 	alacritty
 
-	# Launcher
-	rofi
-
-	# File
-	ntfs-3g
-	nnn
-	nautilus
-
 	# Window manager
 	gnome
-	i3
-	i3status
+	#i3
+	#i3status
+
+	# Launcher
+	#rofi
 
 	# Media
 	mpv
