@@ -68,6 +68,7 @@ packages=(
 	qbittorrent
 	audacity
 	gimp
+	rclone
 )
 
 
