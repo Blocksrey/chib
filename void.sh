@@ -73,7 +73,12 @@ packages=(
 
 # Packages
 echo "Installing packages..." &&
-xbps-install -Syu void-repo-nonfree &&
+
+xbps-install -Syu \
+void-repo-multilib \
+void-repo-nonfree \
+void-repo-multilib-nonfree &&
+
 xbps-install -Sy ${packages[@]} &&
 
 
