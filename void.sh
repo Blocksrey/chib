@@ -38,7 +38,7 @@ packages=(
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
-	xorg-apps
+	#xorg-apps
 	#wayland
 	#xorg-server-xwayland
 
