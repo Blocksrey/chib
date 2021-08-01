@@ -16,29 +16,29 @@ packages=(
 	gcc
 	LuaJIT
 
-	# Libraries
+	# Headers
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
-	#libxcb
 
 	# File management
 	p7zip
-	ntfs-3g
-	#nnn
+	nnn
+	nautilus
 
 	# Drivers
 	nvidia
 	alsa-utils
 	dbus
 	#linux-headers
+	#libxcb
 
 	# Compositors
 	xauth
+	xinit
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
-	#xorg-apps
 	#wayland
 	#xorg-server-xwayland
 
@@ -52,12 +52,12 @@ packages=(
 	alacritty
 
 	# Window manager
-	gnome
-	#i3
-	#i3status
+	i3
+	i3status
+	#gnome
 
 	# Launcher
-	#rofi
+	rofi
 
 	# Media
 	mpv
@@ -70,6 +70,7 @@ packages=(
 	gimp
 	rclone
 	feh
+	deadbeef
 )
 
 
@@ -122,9 +123,10 @@ ln -s /etc/sv/sddm /var/service/ &&
 
 
 # i3
-#echo "Configuring i3..." &&
-#cd /home/* &&
-#printf "\nbindsym $mod+o rofi -show drun" >> .config/i3/config &&
+echo "Configuring i3..." &&
+startx &&
+cd /home/* &&
+printf "\nbindsym \$mod+o rofi -show drun" >> .config/i3/config &&
 
 
 # Reboot
