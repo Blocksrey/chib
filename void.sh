@@ -69,6 +69,7 @@ packages=(
 	audacity
 	gimp
 	rclone
+	feh
 )
 
 
