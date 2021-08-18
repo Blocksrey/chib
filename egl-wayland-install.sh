@@ -2,7 +2,7 @@
 xbps-install -Sy curl git gcc libX11-devel wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
 
 # EGL headers
-mkdir /usr/include/EGL /usr/include/KHR
+mkdir /usr/include/EGL /usr/include/KHR &&
 curl -s https://www.khronos.org/registry/EGL/api/EGL/egl.h --output /usr/include/EGL/egl.h &&
 curl -s https://www.khronos.org/registry/EGL/api/EGL/eglext.h --output /usr/include/EGL/eglext.h &&
 curl -s https://www.khronos.org/registry/EGL/api/EGL/eglplatform.h --output /usr/include/EGL/eglplatform.h &&
