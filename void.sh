@@ -15,6 +15,7 @@ packages=(
 	cmake
 	gcc
 	LuaJIT
+	nodejs
 
 	# Headers
 	SDL2-devel
