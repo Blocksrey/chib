@@ -67,7 +67,7 @@ packages=(
 
 	# Huh
 	qbittorrent
-	audacity
+	#audacity
 	gimp
 	rclone
 	feh
