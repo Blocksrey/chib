@@ -39,18 +39,14 @@ packages=(
 	# Window manager
 	gnome
 
-	# Fonts
-	# noto-fonts-cjk
-	# noto-fonts-emoji
-
 	# Media
-	# mpv
-	# youtube-dl
-	# ffmpeg
+	#mpv
+	youtube-dl
+	ffmpeg
 
 	# Huh
-	# qbittorrent
-	# gimp
+	qbittorrent
+	gimp
 )
 
 # Ah shit, here we go again...
