@@ -40,7 +40,7 @@ packages=(
 	gnome
 
 	# Media
-	#mpv
+	mpv
 	youtube-dl
 	ffmpeg
 
