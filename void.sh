@@ -128,7 +128,7 @@ echo "Configuring i3..." &&
 cd /home/* &&
 printf "exec i3" > .xinitrc &&
 startx &&
-printf "\nbindsym \$mod+o rofi -show drun" >> .config/i3/config &&
+printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 
 
 # Reboot
