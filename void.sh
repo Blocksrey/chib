@@ -25,8 +25,8 @@ packages=(
 	# File management
 	p7zip
 	nnn
-	nautilus
-	gvfs
+	#nautilus
+	#gvfs
 
 	# Drivers
 	nvidia
