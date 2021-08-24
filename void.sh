@@ -31,7 +31,7 @@ packages=(
 	# Drivers
 	nvidia
 	alsa-utils
-	dbus
+	#dbus
 	#linux-headers
 	#libxcb
 	libatomic
@@ -49,7 +49,7 @@ packages=(
 	firefox
 
 	# Display manager
-	sddm
+	#sddm
 
 	# Terminal
 	alacritty
@@ -97,9 +97,9 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 
 # Services
-echo "Enabling services..." &&
-ln -s /etc/sv/dbus /var/service/ &&
-ln -s /etc/sv/sddm /var/service/ &&
+#echo "Enabling services..." &&
+#ln -s /etc/sv/dbus /var/service/ &&
+#ln -s /etc/sv/sddm /var/service/ &&
 
 
 # Install EGL Wayland
@@ -123,12 +123,12 @@ ln -s /etc/sv/sddm /var/service/ &&
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
-
 # i3
-#echo "Configuring i3..." &&
-#startx &&
-#cd /home/* &&
-#printf "\nbindsym \$mod+o rofi -show drun" >> .config/i3/config &&
+echo "Configuring i3..." &&
+cd /home/* &&
+printf "exec i3" > .xinitrc &&
+startx &&
+printf "\nbindsym \$mod+o rofi -show drun" >> .config/i3/config &&
 
 
 # Reboot
