@@ -26,6 +26,7 @@ packages=(
 	p7zip
 	nnn
 	nautilus
+	gvfs
 
 	# Drivers
 	nvidia
@@ -102,25 +103,25 @@ ln -s /etc/sv/sddm /var/service/ &&
 
 
 # Install EGL Wayland
-bash egl-wayland-install.sh &&
+#bash egl-wayland-install.sh &&
 
 # Blacklist Nouveau
-mkdir /etc/modprob.d &&
-echo "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
+#mkdir /etc/modprob.d &&
+#echo "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
-echo "Enabling Nvidia modeset..." &&
-sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
-grub-mkconfig -o /boot/grub/grub.cfg &&
+#echo "Enabling Nvidia modeset..." &&
+#sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
+#grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # Update GDM rules
-sed -i "s/DRIVER/#DRIVER/g" /usr/lib/udev/rules.d/61-gdm.rules &&
+#sed -i "s/DRIVER/#DRIVER/g" /usr/lib/udev/rules.d/61-gdm.rules &&
 
 # Generate new initramfs image
-dracut -q /boot/initramfs-$(uname -r).img $(uname -r) --force &&
+#dracut -q /boot/initramfs-$(uname -r).img $(uname -r) --force &&
 
 # Enable kms-modifiers
-gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
+#gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
 
 # i3
