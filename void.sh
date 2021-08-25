@@ -39,7 +39,6 @@ packages=(
 	# Compositors
 	xauth
 	xinit
-xterm
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
