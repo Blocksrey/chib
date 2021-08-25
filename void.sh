@@ -39,6 +39,7 @@ packages=(
 	# Compositors
 	xauth
 	xinit
+xterm
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
@@ -86,6 +87,7 @@ xbps-install -Sy ${packages[@]} &&
 
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
+mkdir /usr/share/fonts &&
 mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
@@ -111,6 +113,8 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
+
+sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
 # i3
 printf "\nConfiguring i3..." &&
