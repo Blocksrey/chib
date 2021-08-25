@@ -31,7 +31,7 @@ packages=(
 	# Drivers
 	nvidia
 	libatomic
-	#alsa-utils
+	alsa-utils
 	#dbus
 	#linux-headers
 	#libxcb
