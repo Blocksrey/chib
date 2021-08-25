@@ -30,11 +30,11 @@ packages=(
 
 	# Drivers
 	nvidia
-	alsa-utils
+	libatomic
+	#alsa-utils
 	#dbus
 	#linux-headers
 	#libxcb
-	libatomic
 
 	# Compositors
 	xauth
@@ -49,7 +49,7 @@ packages=(
 	firefox
 
 	# Display manager
-	#sddm
+	sddm
 
 	# Terminal
 	alacritty
@@ -68,17 +68,17 @@ packages=(
 	ffmpeg
 
 	# Huh
-	qbittorrent
-	#audacity
-	gimp
+	#qbittorrent
+	#gimp
 	rclone
 	feh
 	deadbeef
+	#audacity
 )
 
 
 # Packages
-echo "Installing packages..." &&
+printf "\nInstalling packages..." &&
 
 xbps-install -Syu \
 void-repo-multilib \
@@ -89,7 +89,7 @@ xbps-install -Sy ${packages[@]} &&
 
 
 # Sazanami font
-echo "Installing sazanami fonts..." &&
+printf "\nInstalling sazanami fonts..." &&
 mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
@@ -97,9 +97,9 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 
 # Services
-#echo "Enabling services..." &&
-#ln -s /etc/sv/dbus /var/service/ &&
-#ln -s /etc/sv/sddm /var/service/ &&
+printf "\nEnabling services..." &&
+ln -s /etc/sv/dbus /var/service/ &&
+ln -s /etc/sv/sddm /var/service/ &&
 
 
 # Install EGL Wayland
@@ -107,10 +107,10 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # Blacklist Nouveau
 #mkdir /etc/modprob.d &&
-#echo "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
+#printf "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
-#echo "Enabling Nvidia modeset..." &&
+#printf "\nEnabling Nvidia modeset..." &&
 #sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
 #grub-mkconfig -o /boot/grub/grub.cfg &&
 
@@ -123,18 +123,21 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
+
 # i3
-echo "Configuring i3..." &&
+printf "\nConfiguring i3..." &&
 cd /home/* &&
 printf "exec i3" > .xinitrc &&
 startx &&
+printf "\nEnter config NOWWW!!!" &&
+sleep 10 &&
 printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 
 
 # Reboot
-echo "Rebooting..." &&
+printf "\nRebooting..." &&
 reboot ||
 
 
 # Fail
-echo "Installation failed, glhf."
+printf "\nInstallation failed, glhf."
