@@ -76,17 +76,13 @@ packages=(
 	#audacity
 )
 
-
 # Packages
 printf "\nInstalling packages..." &&
-
 xbps-install -Syu \
 void-repo-multilib \
 void-repo-nonfree \
 void-repo-multilib-nonfree &&
-
 xbps-install -Sy ${packages[@]} &&
-
 
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
@@ -94,13 +90,6 @@ mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
-
-
-# Services
-printf "\nEnabling services..." &&
-ln -s /etc/sv/dbus /var/service/ &&
-ln -s /etc/sv/sddm /var/service/ &&
-
 
 # Install EGL Wayland
 #bash egl-wayland-install.sh &&
@@ -123,7 +112,6 @@ ln -s /etc/sv/sddm /var/service/ &&
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
-
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
@@ -133,11 +121,14 @@ printf "\nEnter config NOWWW!!!" &&
 sleep 10 &&
 printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 
+# Services
+printf "\nEnabling services..." &&
+ln -s /etc/sv/dbus /var/service/ &&
+ln -s /etc/sv/sddm /var/service/ &&
 
 # Reboot
 printf "\nRebooting..." &&
 reboot ||
-
 
 # Fail
 printf "\nInstallation failed, glhf."
