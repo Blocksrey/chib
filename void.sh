@@ -116,6 +116,12 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
+# Services
+printf "\nEnabling services..." &&
+ln -s /etc/sv/dbus /var/service/ &&
+ln -s /etc/sv/sddm /var/service/ &&
+ln -s /etc/sv/NetworkManager /var/service/ &&
+
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
@@ -124,12 +130,6 @@ startx &&
 printf "\nEnter config NOWWW!!!" &&
 sleep 10 &&
 printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
-
-# Services
-printf "\nEnabling services..." &&
-ln -s /etc/sv/dbus /var/service/ &&
-ln -s /etc/sv/sddm /var/service/ &&
-ln -s /etc/sv/NetworkManager /var/service/ &&
 
 # Reboot
 printf "\nRebooting..." &&
