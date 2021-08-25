@@ -125,6 +125,7 @@ printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 printf "\nEnabling services..." &&
 ln -s /etc/sv/dbus /var/service/ &&
 ln -s /etc/sv/sddm /var/service/ &&
+ln -s /etc/sv/NetworkManager /var/service/ &&
 
 # Reboot
 printf "\nRebooting..." &&
