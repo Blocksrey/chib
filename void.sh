@@ -73,6 +73,7 @@ packages=(
 	rclone
 	feh
 	deadbeef
+NetworkManager
 	#audacity
 )
 
@@ -122,13 +123,13 @@ ln -s /etc/sv/sddm /var/service/ &&
 ln -s /etc/sv/NetworkManager /var/service/ &&
 
 # i3
-printf "\nConfiguring i3..." &&
-cd /home/* &&
-printf "exec i3" > .xinitrc &&
-startx &&
-printf "\nEnter config NOWWW!!!" &&
-sleep 10 &&
-printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
+#printf "\nConfiguring i3..." &&
+#cd /home/* &&
+#printf "exec i3" > .xinitrc &&
+#startx &&
+#printf "\nEnter config NOWWW!!!" &&
+#sleep 10 &&
+#printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
 
 # Reboot
 printf "\nRebooting..." &&
