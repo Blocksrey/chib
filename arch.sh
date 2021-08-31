@@ -39,6 +39,8 @@ packages=(
 
 	# Window manager
 	gnome
+	i3-wm
+	i3status-rust
 
 	# Media
 	mpv
@@ -54,6 +56,7 @@ packages=(
 	feh
 	deadbeef
 	audacity
+	discord
 )
 
 # Ah shit, here we go again...
