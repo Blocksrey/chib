@@ -75,6 +75,12 @@ packages=(
 	deadbeef
 NetworkManager
 	#audacity
+	
+	python3
+	python3-cairo-devel
+	gobject-introspection
+	xdg-user-dirs
+	xdg-utils
 )
 
 # Packages
