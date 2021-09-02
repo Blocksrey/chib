@@ -97,8 +97,8 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 #bash egl-wayland-install.sh &&
 
 # Blacklist Nouveau
-mkdir /etc/modprob.d &&
-printf "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
+#mkdir /etc/modprob.d &&
+#printf "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
 printf "\nEnabling Nvidia modeset..." &&
