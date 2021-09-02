@@ -102,7 +102,7 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # Change modeset
 printf "\nEnabling Nvidia modeset..." &&
-sed -i 's/loglevel=4/loglevel=4 rd.driver.blacklist=nouveau nvidia-drm.modeset=1/g' /etc/default/grub &&
+sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # Update GDM rules
@@ -114,6 +114,7 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
+printf "\nRemoving bell sounds" &&
 sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
 # Services
