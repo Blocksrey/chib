@@ -56,7 +56,7 @@ packages=(
 
 	# Window manager
 	i3
-	i3status
+	i3status-rust
 	#gnome
 
 	# Launcher
