@@ -85,7 +85,7 @@ cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
-cp -r inity.sh/.config .config &&
+cp -rf inity.sh/.config ./ &&
 
 # Packages
 printf "\nInstalling packages..." &&
