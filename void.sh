@@ -4,7 +4,6 @@
 # however feel free to use it as you'd like.     #
 ##################################################
 
-
 # Package list
 packages=(
 	# Development
@@ -84,6 +83,12 @@ mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
+# i3
+printf "\nConfiguring i3..." &&
+cd /home/* &&
+mkdir .config/i3 &&
+mv inity.sh/i3conf .config/i3/config &&
+
 # Packages
 printf "\nInstalling packages..." &&
 xbps-install -Syu \
@@ -121,15 +126,6 @@ printf "\nEnabling services..." &&
 ln -s /etc/sv/dbus /var/service/ &&
 ln -s /etc/sv/sddm /var/service/ &&
 ln -s /etc/sv/NetworkManager /var/service/ &&
-
-# i3
-#printf "\nConfiguring i3..." &&
-#cd /home/* &&
-#printf "exec i3" > .xinitrc &&
-#startx &&
-#printf "\nEnter config NOWWW!!!" &&
-#sleep 10 &&
-#printf "\nbindsym \$mod+o exec rofi -show drun -theme android_notification" >> .config/i3/config &&
 
 # Reboot
 printf "\nRebooting..." &&
