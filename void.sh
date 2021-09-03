@@ -136,7 +136,7 @@ ln -s /etc/sv/NetworkManager /var/service/ &&
 #startx &&
 #printf "\nEnter config NOWWW!!!" &&
 #sleep 10 &&
-#printf "\nbindsym \$mod+o exec rofi -show drun" >> .config/i3/config &&
+#printf "\nbindsym \$mod+o exec rofi -show drun -theme android_notification" >> .config/i3/config &&
 
 # Reboot
 printf "\nRebooting..." &&
