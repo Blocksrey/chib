@@ -78,15 +78,14 @@ packages=(
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
 mkdir -p /usr/share/fonts/TTF &&
-7z x sazanami-20040629.tar.bz2 &&
-7z x sazanami-20040629.tar &&
-cp -f sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
+7z x sazanami-20040629.tar.bz2 -aoa &&
+7z x sazanami-20040629.tar -aoa  &&
+cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
-mkdir -p .config/i3 &&
-cp inity.sh/i3conf .config/i3/config &&
+cp -r inity.sh/.config .config &&
 
 # Packages
 printf "\nInstalling packages..." &&
@@ -105,7 +104,7 @@ xbps-install -Sy ${packages[@]} &&
 
 # Change modeset
 printf "\nEnabling Nvidia modeset..." &&
-sed -i 's/loglevel=4/loglevel=4 nvidia-drm.modeset=1/g' /etc/default/grub &&
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1"/' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # Update GDM rules
