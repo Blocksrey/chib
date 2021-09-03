@@ -80,7 +80,7 @@ printf "\nInstalling sazanami fonts..." &&
 mkdir -p /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
-cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
+cp -f sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # i3
 printf "\nConfiguring i3..." &&
@@ -122,9 +122,12 @@ sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
 # Services
 printf "\nEnabling services..." &&
-ln -s /etc/sv/dbus /var/service/ &&
-ln -s /etc/sv/sddm /var/service/ &&
-ln -s /etc/sv/NetworkManager /var/service/ &&
+ln -sf /etc/sv/dbus /var/service/ &&
+ln -sf /etc/sv/sddm /var/service/ &&
+ln -sf /etc/sv/NetworkManager /var/service/ &&
+
+printf "\nRead the stuff" &&
+sleep 5 &&
 
 # Reboot
 printf "\nRebooting..." &&
