@@ -25,16 +25,12 @@ packages=(
 	# File management
 	p7zip
 	nnn
-	#nautilus
-	#gvfs
 
 	# Drivers
 	nvidia
 	libatomic
 	alsa-utils
 	dbus
-	#linux-headers
-	#libxcb
 
 	# Compositors
 	xauth
@@ -42,8 +38,6 @@ packages=(
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
-	#wayland
-	#xorg-server-xwayland
 
 	# Web browser
 	firefox
@@ -57,7 +51,6 @@ packages=(
 	# Window manager
 	i3
 	i3status-rust
-	#gnome
 
 	# Launcher
 	rofi
@@ -73,23 +66,15 @@ packages=(
 	rclone
 	feh
 	deadbeef
-NetworkManager
-	#audacity
+	NetworkManager
 	
+	# Grapejuice stuff
 	python3
 	python3-cairo-devel
 	gobject-introspection
 	xdg-user-dirs
 	xdg-utils
 )
-
-# Packages
-printf "\nInstalling packages..." &&
-xbps-install -Syu \
-void-repo-multilib \
-void-repo-nonfree \
-void-repo-multilib-nonfree &&
-xbps-install -Sy ${packages[@]} &&
 
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
@@ -98,6 +83,14 @@ mkdir /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
+
+# Packages
+printf "\nInstalling packages..." &&
+xbps-install -Syu \
+void-repo-multilib \
+void-repo-nonfree \
+void-repo-multilib-nonfree &&
+xbps-install -Sy ${packages[@]} &&
 
 # Install EGL Wayland
 #bash egl-wayland-install.sh &&
