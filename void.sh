@@ -77,8 +77,7 @@ packages=(
 
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
-mkdir /usr/share/fonts &&
-mkdir /usr/share/fonts/TTF &&
+mkdir -p /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 &&
 7z x sazanami-20040629.tar &&
 cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
@@ -86,8 +85,8 @@ cp sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
-mkdir .config/i3 &&
-mv inity.sh/i3conf .config/i3/config &&
+mkdir -p .config/i3 &&
+cp inity.sh/i3conf .config/i3/config &&
 
 # Packages
 printf "\nInstalling packages..." &&
@@ -101,7 +100,7 @@ xbps-install -Sy ${packages[@]} &&
 #bash egl-wayland-install.sh &&
 
 # Blacklist Nouveau
-#mkdir /etc/modprob.d &&
+#mkdir -p /etc/modprob.d &&
 #printf "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
