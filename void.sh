@@ -28,7 +28,6 @@ packages=(
 	# Drivers
 	nvidia
 	libatomic
-	alsa-utils
 	dbus
 
 	# Compositors
@@ -115,6 +114,10 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # Enable kms-modifiers
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
+
+#audio
+xbps-install -Sy alsa-utils alsaequal &&
+ln -sf /usr/lib/ladspa/caps.so /usr/lib/caps.so &&
 
 printf "\nRemoving bell sounds" &&
 sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
