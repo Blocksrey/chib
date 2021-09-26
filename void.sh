@@ -7,7 +7,7 @@
 # Package list
 packages=(
 	# Development
-	git
+	git059145
 
 	# Compilers and interpreters
 	make
@@ -116,11 +116,11 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 #gsettings set org.gnome.mutter experimental-features [\"kms-modifiers\"] &&
 
 #audio
-xbps-install -Sy alsa-utils alsaequal &&
-ln -sf /usr/lib/ladspa/caps.so /usr/lib/caps.so &&
+#xbps-install -Sy alsa-utils alsaequal &&
+#ln -sf /usr/lib/ladspa/caps.so /usr/lib/caps.so &&
 
-printf "\nRemoving bell sounds" &&
-sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
+#printf "\nRemoving bell sounds" &&
+#sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
 # Services
 printf "\nEnabling services..." &&
