@@ -7,7 +7,7 @@
 # Package list
 packages=(
 	# Development
-	git059145
+	git
 
 	# Compilers and interpreters
 	make
