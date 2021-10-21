@@ -20,7 +20,7 @@ packages=(
 	SDL2_image-devel
 	SDL2_ttf-devel
 	glfw
-	libatomic
+	#libatomic
 
 	# files
 	p7zip
@@ -54,6 +54,7 @@ packages=(
 	ffmpeg
 	deadbeef
 	feh
+	alsa-utils
 
 	# general utilities
 	rtorrent
@@ -74,26 +75,21 @@ packages=(
 	#xdg-utils
 )
 
+# Packages
+printf "\nInstalling packages..." &&
+xbps-install -ySu void-repo-nonfree &&
+xbps-install -ySu ${packages[@]} &&
+
+# Sazanami font
+printf "\nInstalling sazanami fonts..." &&
+mkdir -p /usr/share/fonts/TTF &&
+tar -xf sazanami-20040629.tar.bz2 &&
+cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
+
 # i3
 printf "\nConfiguring i3..." &&
 cd /home/* &&
 cp -rf inity.sh/.config ./ &&
-
-# Packages
-printf "\nInstalling packages..." &&
-xbps-install -ySu \
-void-repo-multilib \
-void-repo-nonfree \
-void-repo-multilib-nonfree &&
-xbps-install -yS ${packages[@]} &&
-
-# Sazanami font
-printf "\nInstalling sazanami fonts..." &&
-mkdir -p /usr/share/fonts &&
-mkdir -p /usr/share/fonts/TTF &&
-7z x sazanami-20040629.tar.bz2 -aoa &&
-7z x sazanami-20040629.tar -aoa &&
-cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # Install EGL Wayland
 #bash egl-wayland-install.sh &&
