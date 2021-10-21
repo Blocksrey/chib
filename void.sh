@@ -6,72 +6,72 @@
 
 # Package list
 packages=(
-	# Development
-	git
-
-	# Compilers and interpreters
+	# compilers/interpreters/engines
 	make
 	cmake
-	gcc
+	clang
+	tcc
 	LuaJIT
 	nodejs
+	love
 
-	# Headers
+	# headers/libraries
 	SDL2-devel
 	SDL2_image-devel
 	SDL2_ttf-devel
+	glfw
+	libatomic
 
-	# File management
+	# files
 	p7zip
 	nnn
+	rclone
 
-	# Drivers
-	nvidia
-	libatomic
+	# drivers
+	nvidia	
 	dbus
 
-	# Compositors
+	# xorg
 	xauth
 	xinit
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
 
-	# Web browser
-	firefox
-
-	# Display manager
-	sddm
-
-	# Terminal
+	# terminal emulator
 	alacritty
 
-	# Window manager
+	# windows
+	sddm
 	i3
 	i3status-rust
-
-	# Launcher
 	rofi
 
-	# Media
+	# video/audio utilities
 	mpv
-	youtube-dl
+	yt-dlp
+	aria2
 	ffmpeg
-
-	# Huh
-	#qbittorrent
-	#gimp
-	rclone
-	feh
 	deadbeef
+	feh
+
+	# general utilities
+	rtorrent
+	#gimp
 	NetworkManager
-	
-	# Grapejuice stuff
-	python3
-	python3-cairo-devel
-	gobject-introspection
-	xdg-user-dirs
-	xdg-utils
+	lm_sensors
+	qrencode
+	git
+	firefox
+
+	# grapejuice
+	#wine
+	#winetricks
+	#python3
+	#python3-cairo-devel
+	#gobject-introspection
+	#xdg-user-dirs
+	#xdg-utils
 )
 
 # i3
@@ -81,17 +81,18 @@ cp -rf inity.sh/.config ./ &&
 
 # Packages
 printf "\nInstalling packages..." &&
-xbps-install -Syu \
+xbps-install -ySu \
 void-repo-multilib \
 void-repo-nonfree \
 void-repo-multilib-nonfree &&
-xbps-install -Sy ${packages[@]} &&
+xbps-install -yS ${packages[@]} &&
 
 # Sazanami font
 printf "\nInstalling sazanami fonts..." &&
+mkdir -p /usr/share/fonts &&
 mkdir -p /usr/share/fonts/TTF &&
 7z x sazanami-20040629.tar.bz2 -aoa &&
-7z x sazanami-20040629.tar -aoa  &&
+7z x sazanami-20040629.tar -aoa &&
 cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
 # Install EGL Wayland
@@ -129,7 +130,7 @@ ln -sf /etc/sv/sddm /var/service/ &&
 ln -sf /etc/sv/NetworkManager /var/service/ &&
 
 printf "\nRead the stuff" &&
-sleep 5 &&
+sleep 3 &&
 
 # Reboot
 printf "\nRebooting..." &&
