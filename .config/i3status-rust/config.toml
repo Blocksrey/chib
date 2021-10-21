@@ -1,15 +1,8 @@
-theme = "modern"
-icons = "none"
-
-[[block]]
-block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
-unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
+[theme]
+name = "native"
+[theme.overrides]
+idle_bg = "#000000"
+idle_fg = "#c0c0c0"
 
 [[block]]
 block = "memory"
@@ -31,5 +24,5 @@ block = "sound"
 
 [[block]]
 block = "time"
-interval = 5
+interval = 30
 format = "%a %d/%m %R"

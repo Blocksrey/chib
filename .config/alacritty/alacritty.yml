@@ -1,0 +1,7 @@
+window:
+  opacity: 0.1
+
+colors:
+  primary:
+    background: '#202020'
+    foreground: '#c0c0c0'
