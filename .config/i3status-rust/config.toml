@@ -2,7 +2,7 @@
 name = "native"
 [theme.overrides]
 idle_bg = "#000000"
-idle_fg = "#c0c0c0"
+idle_fg = "#ffffff"
 
 [[block]]
 block = "memory"
