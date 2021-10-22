@@ -59,7 +59,7 @@ packages=(
 	# general utilities
 	rtorrent
 	#gimp
-	NetworkManager
+	connman
 	lm_sensors
 	qrencode
 	git
@@ -123,7 +123,7 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 printf "\nEnabling services..." &&
 ln -sf /etc/sv/dbus /var/service/ &&
 ln -sf /etc/sv/sddm /var/service/ &&
-ln -sf /etc/sv/NetworkManager /var/service/ &&
+ln -sf /etc/sv/connmand /var/service/ &&
 
 printf "\nRead the stuff" &&
 sleep 3 &&
