@@ -6,7 +6,7 @@
 
 # Package list
 packages=(
-	# compilers/interpreters/engines
+	# build/compilers/interpreters/engines
 	make
 	cmake
 	clang
@@ -24,11 +24,12 @@ packages=(
 
 	# files
 	p7zip
-	nnn
+	#nnn
+	nautilus
 	rclone
 
 	# drivers
-	nvidia	
+	nvidia
 	dbus
 
 	# xorg
@@ -43,9 +44,12 @@ packages=(
 
 	# windows
 	sddm
-	i3
-	i3status-rust
-	rofi
+	#i3
+	#i3status-rust
+	#rofi
+	dmenu
+	bspwm
+	sxhkd
 
 	# video/audio utilities
 	mpv
@@ -76,18 +80,18 @@ packages=(
 )
 
 # Packages
-printf "\nInstalling packages..." &&
+echo "Installing packages..." &&
 xbps-install -ySu void-repo-nonfree &&
 xbps-install -ySu ${packages[@]} &&
 
 # Sazanami font
-printf "\nInstalling sazanami fonts..." &&
+echo "Installing sazanami fonts..." &&
 mkdir -p /usr/share/fonts/TTF &&
 tar -xf sazanami-20040629.tar.bz2 &&
 cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 
-# i3
-printf "\nConfiguring i3..." &&
+# General configuration
+echo "Configuring..." &&
 cd /home/* &&
 cp -rf inity.sh/.config ./ &&
 
@@ -96,10 +100,10 @@ cp -rf inity.sh/.config ./ &&
 
 # Blacklist Nouveau
 #mkdir -p /etc/modprob.d &&
-#printf "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
+#echo "blacklist nouveau" > /etc/modprob.d/blacklist.conf &&
 
 # Change modeset
-printf "\nEnabling Nvidia modeset..." &&
+echo "Enabling Nvidia modeset..." &&
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1"/' /etc/default/grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
@@ -116,21 +120,21 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 #xbps-install -Sy alsa-utils alsaequal &&
 #ln -sf /usr/lib/ladspa/caps.so /usr/lib/caps.so &&
 
-#printf "\nRemoving bell sounds" &&
+#echo "Removing bell sounds" &&
 #sed -i "s/# set bell-style none/set bell-style none/g" /etc/inputrc &&
 
 # Services
-printf "\nEnabling services..." &&
+echo "Enabling services..." &&
 ln -sf /etc/sv/dbus /var/service/ &&
 ln -sf /etc/sv/sddm /var/service/ &&
 ln -sf /etc/sv/connmand /var/service/ &&
 
-printf "\nRead the stuff" &&
+echo "Read the stuff" &&
 sleep 3 &&
 
 # Reboot
-printf "\nRebooting..." &&
+echo "Rebooting..." &&
 reboot ||
 
 # Fail
-printf "\nInstallation failed, glhf."
+echo "Installation failed, glhf."
