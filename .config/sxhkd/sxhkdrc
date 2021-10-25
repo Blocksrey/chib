@@ -108,3 +108,7 @@ super + alt + shift + {Left,Down,Up,Right}
 
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+super + {F1,F2,F3}
+	amixer set Master {toggle,5%-,5%+}
