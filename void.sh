@@ -40,7 +40,8 @@ packages=(
 	xorg-video-drivers
 
 	# terminal emulator
-	alacritty
+	#alacritty
+	st
 
 	# windows
 	sddm
