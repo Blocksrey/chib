@@ -107,3 +107,8 @@ super + {Left,Down,Up,Right}
 
 super + {F1,F2,F3}
 	amixer set Master {toggle,5%-,5%+}
+
+
+#brightness
+super + {F5,F6}
+	~/.scripts/bright.sh {-,+}

@@ -2,7 +2,10 @@
 
 sxhkd &
 
-feh --bg-center ~/.config/jp.jpg
+feh --bg-center ~/.wallpaper/jp.jpg
+
+xrandr --output DP-2 --brightness 0.5
+xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --brightness 0.5
 
 bspc config border_width 0
 bspc config window_gap   8

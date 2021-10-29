@@ -38,6 +38,7 @@ packages=(
 	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
+	xrandr
 
 	# terminal emulator
 	#alacritty
@@ -94,7 +95,7 @@ cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 # General configuration
 echo "Configuring..." &&
 cd /home/* &&
-cp -rf inity.sh/.config ./ &&
+cp -rf inity.sh/~/* ./ &&
 
 # Install EGL Wayland
 #bash egl-wayland-install.sh &&
@@ -129,9 +130,6 @@ echo "Enabling services..." &&
 ln -sf /etc/sv/dbus /var/service/ &&
 ln -sf /etc/sv/sddm /var/service/ &&
 ln -sf /etc/sv/connmand /var/service/ &&
-
-echo "Read the stuff" &&
-sleep 3 &&
 
 # Reboot
 echo "Rebooting..." &&
