@@ -95,7 +95,7 @@ cp -rf sazanami-20040629/*.ttf /usr/share/fonts/TTF/ &&
 # General configuration
 echo "Configuring..." &&
 cd /home/* &&
-cp -rf inity.sh/~/* ./ &&
+cp -af inity.sh/~/. ./ &&
 
 # Install EGL Wayland
 #bash egl-wayland-install.sh &&
