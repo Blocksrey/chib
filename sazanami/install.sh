@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname "$0") &&
+
 echo "Installing sazanami fonts..." &&
 
 mkdir -p /usr/share/fonts/TTF &&

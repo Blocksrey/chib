@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Package list
 packages=(
 	# stupid shit
@@ -64,7 +66,6 @@ packages=(
 	qrencode
 	git
 	firefox
-	intel-undervolt
 
 	# grapejuice
 	#wine

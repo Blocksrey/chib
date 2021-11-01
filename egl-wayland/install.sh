@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname "$0") &&
+
 # Other prerequisites
 xbps-install -yS curl git gcc libX11-devel wayland-devel wayland-protocols meson ninja pkg-config libtool gettext &&
 

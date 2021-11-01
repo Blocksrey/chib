@@ -4,9 +4,10 @@
 # however feel free to use it as you'd like.     #
 ##################################################
 
-bash packages/install.sh &&
-bash intel-undervolt/install.sh &&
+bash home/install.sh &&
 bash sazanami/install.sh &&
+bash intel-undervolt/install.sh &&
+bash packages/install.sh &&
 #bash egl-wayland-install.sh &&
 
 # Change modeset
@@ -18,9 +19,9 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 echo "Enabling services..." &&
 ln -sf /etc/sv/dbus /var/service &&
 ln -sf /etc/sv/sddm /var/service &&
-ln -sf /etc/sv/connmand /var/service &&
+ln -sf /etc/sv/connmand /var/service
 
 # restartttt
-#reboot &&
-#echo "Rebooting" ||
-#echo "Failed TO FUCKING INSTALL"
+reboot &&
+echo "Rebooting" ||
+echo "Failed TO FUCKING INSTALL"
