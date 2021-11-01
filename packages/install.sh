@@ -66,6 +66,7 @@ packages=(
 	qrencode
 	git
 	firefox
+	obs
 
 	# grapejuice
 	#wine
