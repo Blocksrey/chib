@@ -1,0 +1,143 @@
+04:36:34 PM.737: CPU Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+04:36:34 PM.737: CPU Speed: 2600.000MHz
+04:36:34 PM.737: Physical Cores: 6, Logical Cores: 12
+04:36:34 PM.737: Physical Memory: 15927MB Total, 15411MB Free
+04:36:34 PM.737: Kernel Version: Linux 5.13.19_1
+04:36:34 PM.737: Distribution: "void" Unknown
+04:36:34 PM.737: Session Type: x11
+04:36:34 PM.737: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.13
+04:36:34 PM.738: Portable mode: false
+04:36:34 PM.784: OBS 27.1.3 (linux)
+04:36:34 PM.784: ---------------------------------
+04:36:34 PM.784: ---------------------------------
+04:36:34 PM.784: audio settings reset:
+04:36:34 PM.784: 	samples per sec: 48000
+04:36:34 PM.784: 	speakers:        2
+04:36:34 PM.788: ---------------------------------
+04:36:34 PM.788: Initializing OpenGL...
+04:36:34 PM.852: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2
+04:36:34 PM.852: OpenGL loaded successfully, version 3.3.0 NVIDIA 470.74, shading language 3.30 NVIDIA via Cg compiler
+04:36:34 PM.860: ---------------------------------
+04:36:34 PM.860: video settings reset:
+04:36:34 PM.860: 	base resolution:   1920x1080
+04:36:34 PM.860: 	output resolution: 1920x1080
+04:36:34 PM.860: 	downscale filter:  Bicubic
+04:36:34 PM.860: 	fps:               30/1
+04:36:34 PM.860: 	format:            NV12
+04:36:34 PM.860: 	YUV mode:          709/Partial
+04:36:34 PM.860: NV12 texture support not available
+04:36:34 PM.860: Audio monitoring device:
+04:36:34 PM.860: 	name: Default
+04:36:34 PM.860: 	id: default
+04:36:34 PM.860: ---------------------------------
+04:36:34 PM.862: Failed to load 'en-US' text for module: 'decklink-captions.so'
+04:36:34 PM.864: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+04:36:34 PM.925: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+04:36:34 PM.925: No blackmagic support
+04:36:34 PM.935: v4l2loopback not installed, virtual camera disabled
+04:36:34 PM.968: NVENC supported
+04:36:34 PM.968: FFMPEG VAAPI supported
+04:36:34 PM.986: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+04:36:34 PM.986: 
+04:36:34 PM.986: Couldn't find VLC installation, VLC video source disabled
+04:36:34 PM.989: ---------------------------------
+04:36:34 PM.989:   Loaded Modules:
+04:36:34 PM.989:     nvfbc.so
+04:36:34 PM.989:     vlc-video.so
+04:36:34 PM.989:     text-freetype2.so
+04:36:34 PM.989:     rtmp-services.so
+04:36:34 PM.989:     obs-x264.so
+04:36:34 PM.989:     obs-transitions.so
+04:36:34 PM.989:     obs-outputs.so
+04:36:34 PM.989:     obs-libfdk.so
+04:36:34 PM.989:     obs-filters.so
+04:36:34 PM.989:     obs-ffmpeg.so
+04:36:34 PM.989:     linux-v4l2.so
+04:36:34 PM.989:     linux-pulseaudio.so
+04:36:34 PM.989:     linux-jack.so
+04:36:34 PM.989:     linux-decklink.so
+04:36:34 PM.989:     linux-capture.so
+04:36:34 PM.989:     linux-alsa.so
+04:36:34 PM.989:     image-source.so
+04:36:34 PM.989:     frontend-tools.so
+04:36:34 PM.989:     decklink-ouput-ui.so
+04:36:34 PM.989:     decklink-captions.so
+04:36:34 PM.989: ---------------------------------
+04:36:34 PM.989: ==== Startup complete ===============================================
+04:36:34 PM.994: All scene data cleared
+04:36:34 PM.994: ------------------------------------------------
+04:36:35 PM.005: pulse-input: Server name: 'pulseaudio 15.0'
+04:36:35 PM.005: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:36:35 PM.005: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:36:35 PM.005: [Loaded global audio device]: 'Desktop Audio'
+04:36:35 PM.005: pulse-input: Server name: 'pulseaudio 15.0'
+04:36:35 PM.006: pulse-input: Audio format: s24le, 44100 Hz, 2 channels
+04:36:35 PM.006: pulse-input: Sample format s24le not supported by OBS,using float32le instead for recording
+04:36:35 PM.006: pulse-input: Started recording from 'alsa_input.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo'
+04:36:35 PM.006: [Loaded global audio device]: 'Mic/Aux'
+04:36:35 PM.006: v4l2-input: Start capture from /dev/video0
+04:36:35 PM.104: v4l2-input: Input: 0
+04:36:35 PM.109: v4l2-input: Resolution: 1280x720
+04:36:35 PM.109: v4l2-input: Pixelformat: YUYV
+04:36:35 PM.109: v4l2-input: Linesize: 2560 Bytes
+04:36:35 PM.109: v4l2-input: Framerate: 10.00 fps
+04:36:35 PM.110: v4l2-input: /dev/video0: select timeout set to 500000us (5x frame periods)
+04:36:35 PM.173: Unable to cleanup NvFBC
+04:36:35 PM.179: Switched to scene 'Scene'
+04:36:35 PM.318: ------------------------------------------------
+04:36:35 PM.318: Loaded scenes:
+04:36:35 PM.318: - scene 'Scene':
+04:36:35 PM.318:     - source: 'NvFBC Source' (nvfbc-source)
+04:36:35 PM.318:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+04:36:35 PM.318: ------------------------------------------------
+04:36:35 PM.545: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Mic/Aux)
+04:36:35 PM.545: 
+04:37:56 PM.786: pulse-input: Stopped recording from 'default'
+04:37:56 PM.786: pulse-input: Got 18449 packets with 3605089 frames
+04:37:56 PM.786: pulse-input: Server name: 'pulseaudio 15.0'
+04:37:56 PM.787: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:37:56 PM.787: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:37:57 PM.263: pulse-input: Stopped recording from 'default'
+04:37:57 PM.263: pulse-input: Got 146 packets with 19657 frames
+04:37:57 PM.264: pulse-input: Server name: 'pulseaudio 15.0'
+04:37:57 PM.264: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:37:57 PM.264: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:37:57 PM.886: pulse-input: Stopped recording from 'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor'
+04:37:57 PM.886: pulse-input: Got 191 packets with 25708 frames
+04:37:57 PM.886: pulse-input: Server name: 'pulseaudio 15.0'
+04:37:57 PM.887: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:37:57 PM.887: pulse-input: Started recording from 'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor'
+04:37:59 PM.469: pulse-input: Stopped recording from 'alsa_output.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo.monitor'
+04:37:59 PM.469: pulse-input: Got 308 packets with 68376 frames
+04:37:59 PM.470: pulse-input: Server name: 'pulseaudio 15.0'
+04:37:59 PM.470: pulse-input: Audio format: s24le, 44100 Hz, 2 channels
+04:37:59 PM.470: pulse-input: Sample format s24le not supported by OBS,using float32le instead for recording
+04:37:59 PM.470: pulse-input: Started recording from 'alsa_output.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo.monitor'
+04:38:00 PM.415: pulse-input: Stopped recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:38:00 PM.415: pulse-input: Got 159 packets with 40476 frames
+04:38:00 PM.416: pulse-input: Server name: 'pulseaudio 15.0'
+04:38:00 PM.417: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:38:00 PM.417: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:38:00 PM.993: adding 42 milliseconds of audio buffering, total audio buffering is now 64 milliseconds (source: Desktop Audio)
+04:38:00 PM.993: 
+04:38:30 PM.969: pulse-input: Stopped recording from 'alsa_output.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo.monitor'
+04:38:30 PM.969: pulse-input: Got 9603 packets with 1345995 frames
+04:38:30 PM.970: pulse-input: Server name: 'pulseaudio 15.0'
+04:38:30 PM.970: pulse-input: Audio format: s24le, 44100 Hz, 2 channels
+04:38:30 PM.970: pulse-input: Sample format s24le not supported by OBS,using float32le instead for recording
+04:38:30 PM.970: pulse-input: Started recording from 'alsa_output.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo.monitor'
+04:38:34 PM.937: pulse-input: Stopped recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:38:34 PM.937: pulse-input: Got 678 packets with 173566 frames
+04:38:34 PM.938: pulse-input: Server name: 'pulseaudio 15.0'
+04:38:34 PM.938: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+04:38:34 PM.938: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:43:20 PM.148: pulse-input: Stopped recording from 'default'
+04:43:20 PM.148: pulse-input: Got 35803 packets with 12574019 frames
+04:43:20 PM.148: pulse-input: Server name: 'pulseaudio 15.0'
+04:43:20 PM.149: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+04:43:20 PM.149: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+04:43:20 PM.622: pulse-input: Stopped recording from 'default'
+04:43:20 PM.622: pulse-input: Got 140 packets with 19394 frames
+04:43:20 PM.623: pulse-input: Server name: 'pulseaudio 15.0'
+04:43:20 PM.623: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+04:43:20 PM.624: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'

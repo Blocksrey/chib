@@ -50,8 +50,6 @@ packages=(
 	# Huh
 	qbittorrent
 	gimp
-	
-	NetworkManager
 	rclone
 	feh
 	deadbeef
