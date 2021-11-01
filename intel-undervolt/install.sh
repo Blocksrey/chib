@@ -1,11 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
-cd $(dirname "$0") &&
+# Exit on any error
+set -e
 
-xbps-install -yS intel-undervolt &&
+# Go to script directory
+cd $(dirname $0)
 
-cp intel-undervolt.conf /etc &&
-intel-undervolt apply &&
+# Download intel-undervolt
+xbps-install -yS intel-undervolt
 
-echo "Undervolt suceeded" ||
-echo "Undervolt failed!!!"
+# Copy configuration
+cp intel-undervolt.conf /etc
+
+# Apply changes
+intel-undervolt apply

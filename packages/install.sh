@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Package list
 packages=(
 	# stupid shit
@@ -78,11 +80,5 @@ packages=(
 	#xdg-utils
 )
 
-# Packages
-echo "Installing packages..." &&
-
-xbps-install -ySu void-repo-nonfree &&
-xbps-install -yS ${packages[@]} &&
-
-echo "User packages successfully installed" ||
-echo "User packages failed!!!!"
+xbps-install -yS void-repo-nonfree
+xbps-install -yS ${packages[@]}

@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-cd $(dirname "$0") &&
+# Return fail on any error
+set -e
 
-# Home setup
-echo "Seting up home directory..." &&
+# Go to file directory
+cd $(dirname $0)
 
-cp -rf ./~/. $(getent passwd $SUDO_USER | cut -d: -f6) &&
-
-echo "Created home files" ||
-echo "Failed to create home config"
+# Copy contents into user's home directory
+cp -rf ./~/. $(getent passwd $SUDO_USER | cut -d: -f6)
