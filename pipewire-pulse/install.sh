@@ -9,7 +9,7 @@ space_first() {
 }
 
 # Install required packages
-xbps-install -y alsa-utils pulseaudio-utils pipewire alsa-pipewire
+xbps-install -y alsa-utils pulseaudio-utils pipewire alsa-pipewire elogind
 
 # Copy config template to correct place
 cp -r /usr/share/pipewire /etc/pipewire
@@ -18,6 +18,9 @@ cp -r /usr/share/pipewire /etc/pipewire
 mkdir -p /etc/alsa/conf.d
 ln -sf /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
 ln -sf /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
+
+# Enable elogind service
+ln -s /etc/sv/elogind /var/service
 
 # Remove leading space in pipewire config
 space_first /etc/pipewire/pipewire.conf '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }'
