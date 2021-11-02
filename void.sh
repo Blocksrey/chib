@@ -32,4 +32,4 @@ ln -sf /etc/sv/dbus /var/service
 ln -sf /etc/sv/sddm /var/service
 ln -sf /etc/sv/connmand /var/service
 
-#reboot
+reboot
