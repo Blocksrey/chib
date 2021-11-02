@@ -1,1 +1,1 @@
-{"bitrate":2000,"keyint_sec":1,"use_bufsize":false}
+{"bf":0,"keyint_sec":0,"preset":"hp","rate_control":"lossless"}

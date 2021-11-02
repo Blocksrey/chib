@@ -1,1 +1,1 @@
-{"settings":{"key":"s94h-dapu-cdjs-dke7-a3br","server":"https://a.upload.youtube.com/http_upload_hls?cid={stream_key}&copy=0&file=out.m3u8","service":"YouTube - HLS"},"type":"rtmp_common"}
+{"settings":{"bwtest":false,"key":"s94h-dapu-cdjs-dke7-a3br","server":"https://a.upload.youtube.com/http_upload_hls?cid={stream_key}&copy=0&file=out.m3u8","service":"YouTube - HLS"},"type":"rtmp_common"}
