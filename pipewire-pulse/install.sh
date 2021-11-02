@@ -9,7 +9,10 @@ space_first() {
 }
 
 # Install required packages
-xbps-install alsa-utils pulseaudio-utils pipewire alsa-pipewire
+xbps-install -y alsa-utils pulseaudio-utils pipewire alsa-pipewire
+
+# Copy config template to correct place
+cp -r /usr/share/pipewire /etc/pipewire
 
 # Create directory and symbolic links for alsa
 mkdir -p /etc/alsa/conf.d

@@ -12,8 +12,8 @@ order=(
 	sazanami
 	packages
 	intel-undervolt
-	nvidia-nvfbc
 	pipewire-pulse
+	#nvidia-nvfbc
 )
 
 for i in ${order[@]}
