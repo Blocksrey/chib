@@ -79,4 +79,4 @@ packages=(
 )
 
 xbps-install -yS void-repo-nonfree
-xbps-install -yS ${packages[@]}
+xbps-install -y ${packages[@]}
