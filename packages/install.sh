@@ -56,8 +56,6 @@ packages=(
 	ffmpeg
 	deadbeef
 	feh
-	alsa-utils
-	pulseaudio
 	pavucontrol
 
 	# general utilities
