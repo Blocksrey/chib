@@ -13,7 +13,7 @@ order=(
 	packages
 	intel-undervolt
 	pipewire-pulse
-	nvidia-nvfbc
+	#nvidia-nvfbc
 )
 
 for i in ${order[@]}
