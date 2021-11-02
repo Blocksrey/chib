@@ -10,13 +10,18 @@ set -e
 order=(
 	home
 	sazanami
-	intel-undervolt
 	packages
+	intel-undervolt
+	nvidia-nvfbc
 )
 
 for i in ${order[@]}
 do
+	echo $i: BEGIN
+
 	./$i/install.sh
+
+	echo $i: END
 done
 
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1"/' /etc/default/grub
@@ -26,4 +31,4 @@ ln -sf /etc/sv/dbus /var/service
 ln -sf /etc/sv/sddm /var/service
 ln -sf /etc/sv/connmand /var/service
 
-reboot
+#reboot

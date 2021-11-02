@@ -1,6 +1,7 @@
 #!/bin/sh
 
 sxhkd &
+pipewire &
 
 feh --bg-center ~/.wallpaper/jp.jpg
 
