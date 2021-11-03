@@ -2,17 +2,9 @@
 
 set -e
 
-# Package list
 packages=(
-	# stupid shit
-	make
-	cmake
-	meson
-	ninja
-
 	# compilers/engines
 	clang
-	tcc
 	LuaJIT
 	nodejs
 	love
@@ -25,13 +17,12 @@ packages=(
 
 	# files
 	p7zip
-	#nnn
+	nnn
 	nautilus
 	rclone
 
 	# drivers
 	nvidia
-	dbus
 
 	# xorg
 	xauth
@@ -59,9 +50,8 @@ packages=(
 	pavucontrol
 
 	# general utilities
-	rtorrent
+	aria2
 	#gimp
-	connman
 	lm_sensors
 	qrencode
 	git

@@ -4,6 +4,9 @@ set -e
 # Go to current directory
 cd $(dirname $0)
 
+# Install dependencies
+xbps-install -yS ncurses-devel make cmake git
+
 # Clone nvtop
 git clone https://github.com/Syllo/nvtop.git
 

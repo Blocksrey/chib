@@ -27,10 +27,8 @@ do
 done
 
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1"/' /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
+update-grub
 
-ln -sf /etc/sv/dbus /var/service
 ln -sf /etc/sv/sddm /var/service
-ln -sf /etc/sv/connmand /var/service
 
 reboot
