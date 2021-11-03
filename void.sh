@@ -11,6 +11,7 @@ order=(
 	home
 	sazanami
 	packages
+	nvtop
 	intel-undervolt
 	pipewire-pulse
 	#nvidia-nvfbc
