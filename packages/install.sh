@@ -78,5 +78,5 @@ packages=(
 	#xdg-utils
 )
 
-xbps-install -ySu void-repo-nonfree
-xbps-install -y ${packages[@]}
+xbps-install -yS void-repo-nonfree
+xbps-install -yS ${packages[@]}
