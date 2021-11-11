@@ -105,9 +105,8 @@ super + alt + shift + {Left,Down,Up,Right}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-super + {F1,F2,F3}
-	amixer set Master {toggle,5%-,5%+}
-
+super + {F2,F3}
+	pacl set-sink-volume 0 {-2dB,+2dB}
 
 #brightness
 super + {F5,F6}
