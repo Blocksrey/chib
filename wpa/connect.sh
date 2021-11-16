@@ -1,3 +1,5 @@
+#!/usr/bin/sh
+
 set -e
 
 cp wpa_supplicant.conf /etc/wpa_supplicant
