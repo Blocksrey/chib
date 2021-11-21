@@ -1,18 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 sxhkd &
 pipewire &
-
-feh --bg-center ~/.wallpaper/jp.jpg
 
 xrandr --output DP-2 --brightness 0.5
 xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --brightness 0.5
 
 bspc config border_width 0
-bspc config window_gap   8
-
-#bspc config focused_border_color "#ffffff"
-#bspc config active_border_color "#d05353"
-#bspc config normal_border_color "#f1e8b8"
+bspc config window_gap   0
 
 bspc config pointer_motion_interval 30
