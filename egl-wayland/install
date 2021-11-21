@@ -1,9 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-# Quit on any errors
 set -e
-
-# Go to this directory
 cd $(dirname $0)
 
 # Other prerequisites

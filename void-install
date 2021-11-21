@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ##################################################
 # Voidy, by Jeffrey Skinner.                     #
 # Voidy is personalized specifically for myself, #
@@ -6,6 +6,7 @@
 ##################################################
 
 set -e
+cd $(dirname $0)
 
 order=(
 	home
@@ -14,15 +15,14 @@ order=(
 	nvtop
 	intel-undervolt
 	pipewire-pulse
+	wpa
 	#nvidia-nvfbc
 )
 
 for i in ${order[@]}
 do
 	echo $i: BEGIN
-
-	./$i/install.sh
-
+	./$i/install
 	echo $i: END
 done
 

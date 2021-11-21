@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Bright by Jeffrey Skinner (@Blocksrey)
 
 G=7

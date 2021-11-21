@@ -1,9 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-# Exit on any error
 set -e
-
-# Go to script directory
 cd $(dirname $0)
 
 # Download intel-undervolt

@@ -1,7 +1,6 @@
-# Quit on error
-set -e
+#!/usr/bin/env sh
 
-# Go to current directory
+set -e
 cd $(dirname $0)
 
 # Install dependencies
