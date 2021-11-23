@@ -2,4 +2,4 @@
 set -e
 cd $(dirname $0)
 
-cp ytfetch /usr/bin
+cp bright /usr/bin

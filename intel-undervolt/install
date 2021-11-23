@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
-
 set -e
 cd $(dirname $0)
 
 # Download intel-undervolt
-xbps-install -yS intel-undervolt
+xbps-install -y intel-undervolt
 
 # Copy configuration
 cp intel-undervolt.conf /etc

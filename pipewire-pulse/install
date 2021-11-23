@@ -1,9 +1,8 @@
 #!/usr/bin/env sh
-
-# Source: https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/
-
 set -e
 cd $(dirname $0)
+
+# Source: https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/
 
 # Function for replacing leading character with a space
 space_first() {

@@ -16,7 +16,8 @@ order=(
 	intel-undervolt
 	pipewire-pulse
 	wpa
-	#nvidia-nvfbc
+	bright
+	nvidia-nvfbc
 )
 
 for i in ${order[@]}

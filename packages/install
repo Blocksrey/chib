@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -e
 cd $(dirname $0)
 
@@ -69,5 +68,5 @@ packages=(
 	#xdg-utils
 )
 
-xbps-install -yS void-repo-nonfree
+xbps-install -y void-repo-nonfree
 xbps-install -yS ${packages[@]}

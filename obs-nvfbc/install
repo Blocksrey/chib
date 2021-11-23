@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
-
 set -e
 cd $(dirname $0)
 
-xbps-install -yS git
+xbps-install -y git
 git clone https://gitlab.com/fzwoch/obs-nvfbc.git

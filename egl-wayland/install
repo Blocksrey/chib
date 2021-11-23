@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
-
 set -e
 cd $(dirname $0)
 
 # Other prerequisites
-xbps-install -yS curl git gcc libX11-devel wayland-devel wayland-protocols meson ninja pkg-config libtool gettext
+xbps-install -y curl git gcc libX11-devel wayland-devel wayland-protocols meson ninja pkg-config libtool gettext
 
 # EGL headers
 mkdir -p /usr/include/EGL /usr/include/KHR

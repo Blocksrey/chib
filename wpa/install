@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
-
 set -e
 cd $(dirname $0)
 
-cp wpa /usr/bin/wpa
+cp wpa /usr/bin
