@@ -18,6 +18,7 @@ order=(
 	wpa
 	bright
 	nvidia-nvfbc
+	grapejuice
 )
 
 for i in ${order[@]}

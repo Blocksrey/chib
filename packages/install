@@ -51,21 +51,14 @@ packages=(
 
 	# general utilities
 	aria2
-	#gimp
+	gimp
 	lm_sensors
 	qrencode
 	git
 	firefox
 	obs
-
-	# grapejuice
-	#wine
-	#winetricks
-	#python3
-	#python3-cairo-devel
-	#gobject-introspection
-	#xdg-user-dirs
-	#xdg-utils
+	flameshot
+	steam
 )
 
 xbps-install -y void-repo-nonfree
