@@ -14,9 +14,9 @@ xdg-utils \
 git
 
 
-rm -r /tmp/grapejuice
+#rm -r /tmp/grapejuice
 
-git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
+sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
 
 cd /tmp/grapejuice
 sudo -u $SUDO_USER ./install.py

@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -e
+cd $(dirname $0)
+
+cp grub /etc/default/grub
+update-grub

@@ -18,7 +18,10 @@ order=(
 	wpa
 	bright
 	nvidia-nvfbc
-	grapejuice
+	issue
+	optimize
+	microcode
+	#grapejuice
 )
 
 for i in ${order[@]}
@@ -28,9 +31,4 @@ do
 	echo $i: END
 done
 
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="nvidia-drm.modeset=1"/' /etc/default/grub
-update-grub
-
-ln -sf /etc/sv/sddm /var/service
-
-reboot
+echo REBOOT FOR CHANGES

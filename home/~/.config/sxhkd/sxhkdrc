@@ -1,5 +1,5 @@
 super + Return
-	st
+	alacritty
 
 super + @space
 	dmenu_run
