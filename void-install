@@ -11,9 +11,10 @@ cd $(dirname $0)
 order=(
 	home
 	sazanami
-	ytfetch
 	packages
+	steam
 	nvtop
+	ytfetch
 	pipewire-pulse
 	wpa
 	bright
