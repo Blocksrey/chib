@@ -13,13 +13,12 @@ order=(
 	sazanami
 	packages
 	nvtop
-	#intel-undervolt
 	pipewire-pulse
 	wpa
 	bright
 	nvidia-nvfbc
 	issue
-	optimize
+	grub-modifications
 	microcode
 	#grapejuice
 )
