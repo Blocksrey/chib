@@ -11,6 +11,7 @@ cd $(dirname $0)
 order=(
 	home
 	sazanami
+	ytfetch
 	packages
 	nvtop
 	pipewire-pulse
