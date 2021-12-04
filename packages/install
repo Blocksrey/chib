@@ -57,6 +57,7 @@ packages=(
 	firefox
 	obs
 	flameshot
+	telegram-desktop
 )
 
 xbps-install -y void-repo-nonfree

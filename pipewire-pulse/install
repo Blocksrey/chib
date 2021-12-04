@@ -22,7 +22,7 @@ ln -sf /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 
 # Enable elogind service
 ln -sf /etc/sv/elogind /var/service
-ln -sf /etc/sv/dbus /var/dbus
+ln -sf /etc/sv/dbus /var/service
 
 # Remove leading space in pipewire config
 space_first /etc/pipewire/pipewire.conf '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }'

@@ -12,6 +12,7 @@ order=(
 	home
 	sazanami
 	packages
+	intel-undervolt
 	steam
 	nvtop
 	ytfetch
