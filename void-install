@@ -12,13 +12,14 @@ order=(
 	home
 	sazanami
 	packages
-	intel-undervolt
+	#intel-undervolt
 	steam
 	nvtop
 	ytfetch
 	pipewire-pulse
 	wpa
 	bright
+	nvdrm
 	nvidia-nvfbc
 	issue
 	grub-modifications
