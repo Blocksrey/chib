@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+set -e
+cd $(dirname $0)
+
+xbps-install -y\
+	git\
+	libxml2-devel\
+	autoconf\
+	automake\
+	libtool
+
+git clone https://github.com/aria2/aria2
+cd aria2
+
+make
+
+cd ..
+#rm -r aria2

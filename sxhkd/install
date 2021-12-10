@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -e
+cd $(dirname $0)
+
+xbps-install git
+
+git clone https://github.com/baskerville/sxhkd.git
+cd sxhkd
+
+make
+
+cp -f sxhkd /usr/bin
+
+cd ..
+rm -r sxhkd

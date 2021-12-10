@@ -3,4 +3,5 @@ set -e
 cd $(dirname $0)
 
 xbps-install -y void-repo-multilib
-xbps-install -yS glibc-32bit libdrm-32bit libglvnd-32bit steam
+xbps-install -yS glibc-32bit libdrm-32bit libglvnd-32bit
+xbps-install -y steam

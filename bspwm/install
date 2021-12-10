@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -e
+$(dirname $0)
+
+xbps-install -y xcb-util-wm-devel xcb-util-keysyms-devel git
+
+git clone https://github.com/baskerville/bspwm.git
+cd bspwm
+
+make
+
+cp -f bspwm bspc /usr/bin
+
+cd ..
+rm -r bspwm

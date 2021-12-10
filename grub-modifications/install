@@ -3,4 +3,4 @@ set -e
 cd $(dirname $0)
 
 cp grub /etc/default/grub
-update-grub
+grub-mkconfig -o /boot/grub/grub.cfg
