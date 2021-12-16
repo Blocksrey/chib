@@ -13,8 +13,7 @@ xdg-user-dirs \
 xdg-utils \
 git
 
-
-#rm -r /tmp/grapejuice
+rm -fr /tmp/grapejuice
 
 sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
 

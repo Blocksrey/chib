@@ -7,11 +7,14 @@ xbps-install -y\
 	libxml2-devel\
 	autoconf\
 	automake\
-	libtool
+	libtool\
+	gettext-devel
 
 git clone https://github.com/aria2/aria2
 cd aria2
 
+autoreconf -i
+./configure ARIA2_STATIC=yes
 make
 
 cd ..

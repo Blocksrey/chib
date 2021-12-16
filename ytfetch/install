@@ -2,9 +2,10 @@
 set -e
 cd $(dirname $0)
 
-sudo aria2c https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/bin/yt-dlp
-sudo chmod a+rx /usr/bin/yt-dlp
+xbps-install -y python3
 
-rm -r usr
+aria2c https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+chmod +x yt-dlp
 
+mv yt-dlp /usr/bin
 cp ytfetch /usr/bin

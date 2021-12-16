@@ -4,26 +4,26 @@ cd $(dirname $0)
 
 packages=(
 	# compilers/engines
-	#clang
-	#lld
-	#LuaJIT
-	#nodejs
-	#love
+	clang
+	lld
+	LuaJIT
+	nodejs
+	love
 
 	# headers/libraries
-	#SDL2-devel
-	#SDL2_image-devel
-	#SDL2_ttf-devel
-	#glfw-devel
+	SDL2-devel
+	SDL2_image-devel
+	SDL2_ttf-devel
+	glfw-devel
 
 	# files
-	#p7zip
-	#nnn
-	#nautilus
-	#rclone
+	p7zip
+	nnn
+	nautilus
+	rclone
 
 	# drivers
-	#nvidia
+	nvidia
 
 	# xorg
 	xinit
@@ -33,29 +33,27 @@ packages=(
 	xrandr
 
 	# terminal emulator
-	#alacritty
+	alacritty
 
 	# windows
-	#dmenu
+	dmenu
 
 	# video/audio utilities
-	#mpv
-	#yt-dlp
-	#ffmpeg
-	#deadbeef
-	#feh
-	#pavucontrol
+	mpv
+	ffmpeg
+	deadbeef
+	feh
+	pavucontrol
 
 	# general utilities
-	#aria2
-	#gimp
-	#lm_sensors
-	#qrencode
-	#git
-	#firefox
-	#obs
-	#flameshot
-	#telegram-desktop
+	gimp
+	lm_sensors
+	qrencode
+	git
+	firefox
+	obs
+	flameshot
+	telegram-desktop
 )
 
 xbps-install -y void-repo-nonfree

@@ -2,5 +2,18 @@
 set -e
 cd $(dirname $0)
 
-xbps-install -y git
+xbps-install -y git obs-devel meson
+
 git clone https://gitlab.com/fzwoch/obs-nvfbc.git
+cd obs-nvfbc
+
+mkdir build
+cd build
+
+meson
+ninja
+
+cp nvfbc.so /usr/lib/obs-plugins
+
+cd ../..
+rm -r obs-nvfbc

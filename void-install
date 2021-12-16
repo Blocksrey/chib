@@ -9,22 +9,31 @@ set -e
 cd $(dirname $0)
 
 order=(
-	home
 	sazanami
+
 	packages
-	#intel-undervolt
+
+	home
+
+	intel-undervolt
+	
 	steam
+
+	#nvidia
 	nvtop
+	nvdrm
+	nvidia-nvfbc
+
 	ytfetch
 	pipewire-pulse
 	wpa
 	bright
-	nvdrm
-	nvidia-nvfbc
 	issue
 	grub-modifications
 	microcode
-	#grapejuice
+
+	bspwm
+	sxhkd
 )
 
 for i in ${order[@]}
