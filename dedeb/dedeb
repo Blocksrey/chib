@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+set -e
+
+mkdir -p $1.cont
+
+ar x $1 --output $1.cont
+
+cd $1.cont
+
+tar xf data.tar.xz
+
+cp usr ~/usr
