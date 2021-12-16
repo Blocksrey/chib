@@ -9,4 +9,4 @@ cd $1.cont
 
 tar xf data.tar.xz
 
-cp usr ~/usr
+cp -rT usr /usr

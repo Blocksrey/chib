@@ -4,3 +4,6 @@ set -e
 aria2c https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 
 dedeb steam_latest.deb
+
+rm steam_latest.deb
+rm -r steam_latest.deb.cont
