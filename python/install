@@ -1,0 +1,17 @@
+#!/usr/bin/dash
+set -e
+cd $(dirname $0)
+
+PYVER=3.10.1
+
+aria2c https://www.python.org/ftp/python/$PYVER/Python-$PYVER.tar.xz
+
+tar xf Python-$PYVER.tar.xz
+cd Python-$PYVER
+
+./configure --prefix=/usr# --enable-optimizations
+make install -j$(nproc)
+
+cd ..
+rm Python-$PYVER.tar.xz
+rm -r Python-$PYVER

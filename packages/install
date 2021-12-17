@@ -8,7 +8,6 @@ packages=(
 	lld
 	LuaJIT
 	nodejs
-	love
 
 	# headers/libraries
 	SDL2-devel
@@ -22,9 +21,6 @@ packages=(
 	nautilus
 	rclone
 
-	# drivers
-	nvidia
-
 	# xorg
 	xinit
 	xorg-server
@@ -35,25 +31,23 @@ packages=(
 	# terminal emulator
 	alacritty
 
-	# windows
-	dmenu
-
 	# video/audio utilities
-	mpv
-	ffmpeg
-	deadbeef
-	feh
-	pavucontrol
+	#mpv
+	#ffmpeg
+	#deadbeef
+	#feh
+	#pavucontrol
 
 	# general utilities
-	gimp
-	lm_sensors
-	qrencode
+	#gimp
+	#lm_sensors
+	#qrencode
 	git
-	firefox
-	obs
-	flameshot
-	telegram-desktop
+	#firefox
+	#obs
+	#flameshot
+	#telegram-desktop
+	#aria2
 )
 
 xbps-install -y void-repo-nonfree

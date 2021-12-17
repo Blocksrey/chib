@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 ##################################################
 # Voidy, by Jeffrey Skinner.                     #
 # Voidy is personalized specifically for myself, #
@@ -9,21 +9,26 @@ set -e
 cd $(dirname $0)
 
 order=(
+	nvidia
+
+	chibi-base
+
+	intel-undervolt
+
+	nvtop
+	nvdrm
+	nvidia-nvfbc
+
 	sazanami
 
 	packages
 
 	home
 
-	intel-undervolt
+	python
 
 	dedeb
 	steam
-
-	#nvidia
-	nvtop
-	nvdrm
-	nvidia-nvfbc
 
 	ytfetch
 	pipewire-pulse
@@ -33,15 +38,16 @@ order=(
 	grub-modifications
 	microcode
 
+	dmenu
 	bspwm
 	sxhkd
 )
 
-for i in ${order[@]}
+for module in ${order[@]}
 do
-	echo $i: BEGIN
-	./$i/install
-	echo $i: END
+	echo $module: BEGIN
+	./$module/install
+	echo $module: END
 done
 
 echo REBOOT FOR CHANGES

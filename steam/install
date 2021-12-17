@@ -1,9 +1,13 @@
 #!/usr/bin/sh
+
+# Exit on failure
 set -e
 
+# Fetch latest steam debian package
 aria2c https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 
+# DeDeb the package (installation)
 dedeb steam_latest.deb
 
+# Revert state
 rm steam_latest.deb
-rm -r steam_latest.deb.cont

@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+set -e
+cd $(dirname $0)
+
+xbps-install -y libXft-devel
+
+cd dmenu
+make
+
+cp dmenu dmenu_path dmenu_run stest /usr/bin
+
+make clean

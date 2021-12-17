@@ -1,0 +1,8 @@
+#!/usr/bin/dash
+# Meson Installer
+
+# Quit on error
+set -e
+
+# Install
+python -m pip install meson

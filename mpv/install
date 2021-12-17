@@ -2,13 +2,10 @@
 set -e
 cd $(dirname $0)
 
-xbps-install -y git meson
-
 git clone https://github.com/mpv-player/mpv.git
 cd mpv
 
-mkdir build
-
-meson build
-meson compile -C build
-meson install -C build
+./bootstrap.py
+./waf configure
+./waf
+./waf install

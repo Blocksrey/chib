@@ -1,0 +1,13 @@
+#!/usr/bin/dash
+
+# Quit on errors
+set -e
+
+# Go to file directory
+cd $(dirname $0)
+
+# Fetch and build sources
+while read url
+do
+	getto $url
+done < sources

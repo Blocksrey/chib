@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/dash
 set -e
 cd $(dirname $0)
 
@@ -6,3 +6,5 @@ aria2c https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x
 
 chmod +x nvidia.run
 ./nvidia.run
+
+rm nvidia.run
