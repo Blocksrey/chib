@@ -4,22 +4,22 @@ cd $(dirname $0)
 
 packages=(
 	# compilers/engines
-	clang
-	lld
-	LuaJIT
-	nodejs
+	#clang
+	#lld
+	#LuaJIT
+	#nodejs
 
 	# headers/libraries
-	SDL2-devel
-	SDL2_image-devel
-	SDL2_ttf-devel
-	glfw-devel
+	#SDL2-devel
+	#SDL2_image-devel
+	#SDL2_ttf-devel
+	#glfw-devel
 
 	# files
-	p7zip
-	nnn
+	#p7zip
+	#nnn
 	nautilus
-	rclone
+	#rclone
 
 	# xorg
 	xinit
@@ -42,8 +42,8 @@ packages=(
 	#gimp
 	#lm_sensors
 	#qrencode
-	git
-	#firefox
+	#git
+	firefox
 	#obs
 	#flameshot
 	#telegram-desktop

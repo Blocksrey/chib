@@ -7,7 +7,7 @@ xbps-install -y xcb-util-wm-devel xcb-util-keysyms-devel git
 git clone https://github.com/baskerville/bspwm.git
 cd bspwm
 
-make
+make -j$(nproc)
 
 cp -f bspwm bspc /usr/bin
 

@@ -4,3 +4,10 @@ cd $(dirname $0)
 
 git clone https://git.ffmpeg.org/ffmpeg.git
 cd ffmpeg
+
+./configure
+make install -j$(nproc)
+
+cd ..
+
+rm -r ffmpeg

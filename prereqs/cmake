@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+set -e
+./bootstrap
+make install -j$(nproc)

@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# Exit on error
+set -e
+
+# Configure
+./config
+
+# Build
+make -j$(nproc)
+
+# Install
+make -j$(nproc) install

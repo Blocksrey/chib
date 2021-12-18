@@ -9,9 +9,9 @@ set -e
 cd $(dirname $0)
 
 order=(
-	nvidia
+	dedeb
 
-	chibi-base
+	nvidia
 
 	intel-undervolt
 

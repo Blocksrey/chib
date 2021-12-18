@@ -7,7 +7,7 @@ xbps-install git
 git clone https://github.com/baskerville/sxhkd.git
 cd sxhkd
 
-make
+make -j$(nproc)
 
 cp -f sxhkd /usr/bin
 
