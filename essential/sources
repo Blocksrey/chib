@@ -1,4 +1,8 @@
 https://ftp.gnu.org/gnu/make/make-4.3.tar.gz
+https://www.python.org/ftp/python/3.10.1/Python-3.10.1.tar.xz
+https://github.com/mesonbuild/meson/releases/download/0.60.2/meson-0.60.2.tar.gz
+https://download.gnome.org/sources/glib/2.70/glib-2.70.2.tar.xz
+https://www.kernel.org/pub/software/scm/git/git-2.34.1.tar.gz
 https://ftp.gnu.org/gnu/bash/bash-5.1.8.tar.gz
 https://www.openssl.org/source/openssl-3.0.1.tar.gz
 https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz

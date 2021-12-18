@@ -7,25 +7,18 @@
 set -e
 cd $(dirname $0)
 
-# Prerequisites
-#./prereq/install
-
-# Draggers
-for module in drag/*
-do
+for module in literal/*; do
 	cp $module /usr/bin
 done
 
-# Singles
-for module in single/*
-do
+./essential/install
+
+for module in single/*; do
 	./$module
 done
 
-# Contained
-for module in contained/*/
-do
-	./$module/init
+for module in group/*/; do
+	./$module/install
 done
 
 echo You did it, somehow
