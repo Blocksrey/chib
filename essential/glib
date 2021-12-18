@@ -3,4 +3,4 @@ set -e
 mkdir build
 cd build
 meson
-ninja install
+ninja install -j$(nproc)

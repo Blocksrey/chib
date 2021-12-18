@@ -1,13 +1,7 @@
-#!/usr/bin/dash
-
-# Quit on errors
+#!/usr/bin/bash
 set -e
-
-# Go to file directory
 cd $(dirname $0)
 
-# Fetch and build sources
-while read url
-do
+while read url; do
 	getto $url
 done < sources

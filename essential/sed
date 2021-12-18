@@ -1,3 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/bash
+set -e
 ./configure
-make install
+make install -j$(nproc)

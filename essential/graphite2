@@ -2,5 +2,5 @@
 set -e
 mkdir build
 cd build
-cmake ..
+cmake
 make install -j$(nproc)

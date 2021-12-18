@@ -1,11 +1,8 @@
-#!/usr/bin/dash
-# Libass Installer
-
-# Exit on error
+#!/usr/bin/bash
 set -e
 
-# Configure
-./configure --prefix=/usr --disable-static
+./configure\
+	--prefix=/usr\
+	--disable-static
 
-# Build and install
 make install -j$(nproc)
