@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/bash
 set -e
 cd $(dirname $0)
 
@@ -6,7 +6,7 @@ git clone https://git.ffmpeg.org/ffmpeg.git
 cd ffmpeg
 
 ./configure
-make install -j$(nproc)
+make -j$(nproc) install
 
 cd ..
 

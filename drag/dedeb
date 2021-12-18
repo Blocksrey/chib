@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/bash
 # DeDeb, a platform agnostic deb package installer
 # @Blocksrey
 

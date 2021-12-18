@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/bash
 # Getto, a program fetcher and builder by @Blocksrey
 
 # Exit on error
@@ -25,5 +25,5 @@ cd $getto_fold
 
 # Revert state
 cd ..
-rm -r $getto_fold
+rm $getto_fold -r
 rm $getto_dest

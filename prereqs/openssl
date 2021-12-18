@@ -1,13 +1,8 @@
 #!/usr/bin/bash
-
-# Exit on error
 set -e
-
-# Configure
-./config
-
-# Build
+./config\
+	--prefix=/usr\
+	--openssldir=/etc/ssl\
+	--libdir=lib
 make -j$(nproc)
-
-# Install
-make -j$(nproc) install
+make install -j$(nproc)

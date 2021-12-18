@@ -1,6 +1,7 @@
 https://ftp.gnu.org/gnu/make/make-4.3.tar.gz
 https://ftp.gnu.org/gnu/bash/bash-5.1.8.tar.gz
 https://www.openssl.org/source/openssl-3.0.1.tar.gz
+https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz
 https://cmake.org/files/v3.22/cmake-3.22.1.tar.gz
 https://github.com/fribidi/fribidi/releases/download/v1.0.11/fribidi-1.0.11.tar.xz
 https://github.com/silnrsi/graphite/releases/download/1.3.14/graphite2-1.3.14.tgz
