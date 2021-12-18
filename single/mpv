@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 set -e
-cd $(dirname $0)
 
 aria2c https://github.com/mpv-player/mpv/archive/refs/tags/v0.34.0.tar.gz
 tar xf mpv-0.34.0.tar.gz

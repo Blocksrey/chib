@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/bash
 set -e
-cd $(dirname $0)
 
 # Install dependencies
 xbps-install -y base-devel ncurses-devel make cmake git

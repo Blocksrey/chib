@@ -1,14 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/bash
 set -e
-cd $(dirname $0)
-
-xbps-install git
 
 git clone https://github.com/baskerville/sxhkd.git
 cd sxhkd
 
 make -j$(nproc)
-
 cp -f sxhkd /usr/bin
 
 cd ..

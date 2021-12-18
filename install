@@ -4,62 +4,28 @@
 # Voidy is personalized specifically for myself, #
 # however feel free to use it as you'd like.     #
 ##################################################
-
 set -e
 cd $(dirname $0)
 
-order=(
-	#getto
-	#dedeb
-
-	#nvidia
-
-	#intel-undervolt
-
-	#nvtop
-	#nvdrm
-	#nvidia-nvfbc
-
-	#sazanami
-
-	#packages
-
-	#home
-
-	#python
-
-	#dedeb
-	#steam
-
-	#ytfetch
-	#pipewire-pulse
-	#wpa
-	#bright
-	#issue
-	#grub-modifications
-	#microcode
-
-	#dmenu
-	#bspwm
-	#sxhkd
-)
-
 # Prerequisites
-./prereqs/install
+#./prereq/install
 
+# Draggers
 for module in drag/*
 do
-	cp module /usr/bin
+	cp $module /usr/bin
 done
 
-for module in singles/*/
+# Singles
+for module in single/*
 do
-	./module
+	./$module
 done
 
+# Contained
 for module in contained/*/
 do
-	./module/init
+	./$module/init
 done
 
-echo All good
+echo You did it, somehow

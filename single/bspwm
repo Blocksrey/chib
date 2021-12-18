@@ -1,8 +1,7 @@
-#!/usr/bin/dash
+#!/usr/bin/bash
 set -e
-cd $(dirname $0)
 
-xbps-install -y xcb-util-wm-devel xcb-util-keysyms-devel git
+xbps-install -y xcb-util-wm-devel xcb-util-keysyms-devel
 
 git clone https://github.com/baskerville/bspwm.git
 cd bspwm

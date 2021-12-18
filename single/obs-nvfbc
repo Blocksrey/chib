@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 set -e
-cd $(dirname $0)
 
 xbps-install -y git obs-devel meson
 

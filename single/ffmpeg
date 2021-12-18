@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 set -e
-cd $(dirname $0)
 
 git clone https://git.ffmpeg.org/ffmpeg.git
 cd ffmpeg

@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/bash
 set -e
-cd $(dirname $0)
 
 # Attempt git install
 xbps-install -y git

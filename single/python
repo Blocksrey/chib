@@ -1,6 +1,5 @@
 #!/usr/bin/dash
 set -e
-cd $(dirname $0)
 
 PYVER=3.10.1
 
