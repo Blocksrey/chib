@@ -6,12 +6,12 @@ tar xf mpv-0.34.0.tar.gz
 
 cd mpv-0.34.0
 
-./bootstrap.py
-./waf configure
-./waf
-./waf install
+#./bootstrap.py
+#./waf configure
+#./waf
+#./waf install
 
 cd ..
 
 rm mpv-0.34.0 -r
-rm mpv-3.34.0.tar.gz
+rm mpv-0.34.0.tar.gz
