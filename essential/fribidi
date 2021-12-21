@@ -2,5 +2,6 @@
 set -e
 mkdir build
 cd build
-meson
+meson --prefix=/usr ..
+ninja -j$(nproc)
 ninja install -j$(nproc)

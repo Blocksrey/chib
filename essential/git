@@ -1,4 +1,5 @@
 #!/usr/bin/bash
 set -e
-./configure
+./configure --prefix=/usr
+make -j$(nproc)
 make install -j$(nproc)

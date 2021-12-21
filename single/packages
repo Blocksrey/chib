@@ -3,22 +3,22 @@ set -e
 
 packages=(
 	# compilers/engines
-	#clang
-	#lld
-	#LuaJIT
-	#nodejs
+	clang
+	lld
+	LuaJIT
+	nodejs
 
 	# headers/libraries
-	#SDL2-devel
-	#SDL2_image-devel
-	#SDL2_ttf-devel
-	#glfw-devel
+	SDL2-devel
+	SDL2_image-devel
+	SDL2_ttf-devel
+	glfw-devel
 
 	# files
-	#p7zip
-	#nnn
-	nautilus
-	#rclone
+	p7zip
+	nnn
+	autilus
+	rclone
 
 	# xorg
 	xinit
@@ -31,22 +31,22 @@ packages=(
 	alacritty
 
 	# video/audio utilities
-	#mpv
-	#ffmpeg
-	#deadbeef
-	#feh
-	#pavucontrol
+	mpv
+	ffmpeg
+	deadbeef
+	feh
+	pavucontrol
 
 	# general utilities
-	#gimp
-	#lm_sensors
-	#qrencode
-	#git
+	gimp
+	lm_sensors
+	qrencode
+	git
 	firefox
-	#obs
-	#flameshot
-	#telegram-desktop
-	#aria2
+	obs
+	flameshot
+	telegram-desktop
+	aria2
 )
 
 xbps-install -y void-repo-nonfree

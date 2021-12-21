@@ -2,5 +2,6 @@
 set -e
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+make -j$(nproc)
 make install -j$(nproc)

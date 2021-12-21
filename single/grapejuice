@@ -16,5 +16,5 @@ rm -fr /tmp/grapejuice
 sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
 
 cd /tmp/grapejuice
-sudo -u $SUDO_USER ./install.py
+#sudo -u $SUDO_USER ./install.py
 

@@ -1,11 +1,8 @@
 #!/usr/bin/bash
 set -e
-
 ./config\
 	--prefix=/usr\
 	--openssldir=/etc/ssl\
 	--libdir=lib
-
 make -j$(nproc)
-
-make install -j$(nproc)
+make install_sw -j$(nproc)
