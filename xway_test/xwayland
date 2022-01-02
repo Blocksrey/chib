@@ -2,5 +2,6 @@
 set -e
 mkdir build
 cd build
-make -j$(nproc) ..
-make install -j$(nproc)
+meson ..
+ninja -j$(nproc)
+ninja install -j$(nproc)

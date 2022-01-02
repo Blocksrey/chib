@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+set -e
+
+git clone https://gitlab.freedesktop.org/wayland/wayland.git
+cd wayland
+meson build/ --prefix=/usr
+ninja -C build/ install
+cd ..
+rm wayland -r
+
+
+git clone https://gitlab.freedesktop.org/wayland/wayland-protocols.git
+cd wayland-protocols
+meson build/ --prefix=/usr
+ninja -C build/ install
+cd ..
+rm wayland-protocols -r
+

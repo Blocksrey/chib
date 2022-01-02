@@ -10,19 +10,14 @@ packages=(
 
 	# headers/libraries
 	SDL2-devel
-	SDL2_image-devel
-	SDL2_ttf-devel
-	glfw-devel
 
 	# files
-	p7zip
 	nnn
 	nautilus
 	rclone
 
 	# xorg
 	xinit
-	xorg-server
 	xorg-input-drivers
 	xorg-video-drivers
 	xrandr
@@ -31,8 +26,6 @@ packages=(
 	alacritty
 
 	# video/audio utilities
-	mpv
-	ffmpeg
 	deadbeef
 	feh
 	pavucontrol
@@ -40,8 +33,6 @@ packages=(
 	# general utilities
 	gimp
 	lm_sensors
-	qrencode
-	git
 	firefox
 	obs
 	flameshot
