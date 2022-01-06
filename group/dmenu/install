@@ -1,12 +1,6 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 set -e
-cd $(dirname $0)
-
-xbps-install -y libXft-devel
-
-cd dmenu
-make
-
-cp dmenu dmenu_path dmenu_run stest /usr/bin
-
-make clean
+meson build --prefix=/usr
+ninja -C build -j$(nproc)
+ninja install -C build -j$(nproc)
+rm -r build

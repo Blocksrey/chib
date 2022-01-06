@@ -1,18 +1,28 @@
 #!/usr/bin/bash
 set -e
 
+
+
+xbps-install -y libdrm-devel
+
+
+
 git clone https://gitlab.freedesktop.org/wayland/wayland.git
 cd wayland
-meson build/ --prefix=/usr
-ninja -C build/ install
+meson build --prefix=/usr --buildtype=release -Ddocumentation=false
+ninja -C build -j$(nproc)
+ninja install  -C build -j$(nproc)
+
 cd ..
 rm wayland -r
 
 
+
 git clone https://gitlab.freedesktop.org/wayland/wayland-protocols.git
 cd wayland-protocols
-meson build/ --prefix=/usr
-ninja -C build/ install
+meson build --prefix=/usr --buildtype=release
+ninja -C build -j$(nproc)
+ninja install -C build -j$(nproc)
+
 cd ..
 rm wayland-protocols -r
-

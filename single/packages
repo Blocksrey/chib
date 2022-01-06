@@ -17,10 +17,8 @@ packages=(
 	rclone
 
 	# xorg
-	xinit
 	xorg-input-drivers
 	xorg-video-drivers
-	xrandr
 
 	# terminal emulator
 	alacritty
