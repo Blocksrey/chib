@@ -1,5 +1,0 @@
-#!/usr/bin/sh
-set -e
-cd $(dirname $0)
-
-cp bright /usr/bin

@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-set -e
-./configure
-make install -j$(nproc)

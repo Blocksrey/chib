@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-set -e
-mkdir build
-cd build
-meson ..
-ninja -j$(nproc)
-ninja install -j$(nproc)
