@@ -11,14 +11,14 @@ for module in literal/*; do
 	cp $module /usr/bin
 done
 
-#./essential/install
-
-for module in single/*; do
-	./$module
-done
+./essential/install
 
 for module in group/*/; do
 	./$module/install
+done
+
+for module in single/*; do
+	./$module
 done
 
 echo You did it, somehow

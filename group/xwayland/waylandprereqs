@@ -3,7 +3,17 @@ set -e
 
 
 
-xbps-install -y libdrm-devel
+xbps-install -y libdrm-devel llvm byacc flex libXfixes-devel libXrandr-devel
+
+
+
+aria2c http://xmlsoft.org/sources/libxml2-2.9.12.tar.gz
+tar xf libxml2-2.9.12.tar.gz
+cd libxml2-2.9.12
+../libxml2
+cd ..
+rm -r libxml2-2.9.12
+rm libxml2-2.9.12.tar.gz
 
 
 

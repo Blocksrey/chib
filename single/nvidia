@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 set -e
 
-aria2c https://us.download.nvidia.com/XFree86/Linux-x86_64/470.94/NVIDIA-Linux-x86_64-470.94.run -o nvidia.run
+xbps-install -y linux-headers
+
+aria2c https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x86_64-495.44.run -o nvidia.run
 
 chmod +x nvidia.run
 ./nvidia.run

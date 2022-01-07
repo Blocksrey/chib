@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+set -e
+xbps-install -y git aria2 make xz
+./install
