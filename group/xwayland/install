@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 set -e
 cd $(dirname $0)
-#./waylandprereqs
+./waylandprereqs
 while read url; do
 	getto $url
 done < sources
