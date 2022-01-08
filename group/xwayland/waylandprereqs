@@ -3,7 +3,8 @@ set -e
 
 
 
-xbps-install -y libdrm-devel llvm byacc flex libXfixes-devel libXrandr-devel
+#libdrm-devel libXfixes-devel libXrandr-devel
+xbps-install -y llvm byacc flex
 
 
 
@@ -12,8 +13,18 @@ tar xf libxml2-2.9.12.tar.gz
 cd libxml2-2.9.12
 ../libxml2
 cd ..
-rm -r libxml2-2.9.12
+rm libxml2-2.9.12 -r
 rm libxml2-2.9.12.tar.gz
+
+
+
+aria2c https://github.com/libexpat/libexpat/releases/download/R_2_4_2/expat-2.4.2.tar.gz
+tar xf expat-2.4.2.tar.gz
+cd expat-2.4.2
+../expat
+cd ..
+rm expat-2.4.2 -r
+rm expat-2.4.2.tar.gz
 
 
 

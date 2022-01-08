@@ -4,7 +4,7 @@ set -e
 git clone https://git.ffmpeg.org/ffmpeg.git
 cd ffmpeg
 
-./configure
+./configure --prefix=/usr
 make -j$(nproc) install
 
 cd ..
