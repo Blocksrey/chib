@@ -5,10 +5,8 @@ export LIBGL_DEBUG=verbose
 export WAYLAND_DEBUG=1
 export WLR_NO_HARDWARE_CURSORS=1
 
-sudo xbps-install -y river foot
-
 sudo usermod -aG _seatd jeff
-sudo xbps-install -y seatd
+sudo xbps-install -y seatd river foot
 sudo ln -sf /etc/sv/seatd /var/service
 
 cd
