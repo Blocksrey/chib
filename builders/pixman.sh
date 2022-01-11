@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 set -e
-mkdir build
-cd build
-meson --prefix=/usr
-ninja -j$(nproc)
-ninja install -j$(nproc)
+meson build --prefix=/usr
+ninja -C build -j `nproc`
+ninja -C build -j `nproc` install
