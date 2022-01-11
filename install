@@ -7,7 +7,7 @@
 set -e
 cd `dirname $0`
 
-xbps-install -y aria2 gcc zlib-devel libffi-devel ninja flex obs-devel llvm autoconf xinit bspwm
+xbps-install -y aria2 gcc zlib-devel libffi-devel ninja flex obs-devel llvm autoconf xinit bspwm xrandr
 
 for module in scripts/*
 do

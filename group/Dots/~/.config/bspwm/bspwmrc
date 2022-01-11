@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 pipewire &
 
 feh --bg-center ~/.wallpaper/jp.jpg
