@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-set -e
-cd $(dirname $0)
-while read url; do
-	getto $url
-done < sources

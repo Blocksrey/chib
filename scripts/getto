@@ -34,7 +34,7 @@ fi
 
 # Build or do whatever
 cd $getto_fold
-../$getto_base.sh
+$2/$getto_base.sh
 
 # Revert state
 cd ..

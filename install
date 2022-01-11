@@ -5,22 +5,17 @@
 # however feel free to use it as you'd like.     #
 ##################################################
 set -e
-cd $(dirname $0)
+cd `dirname $0`
 
-xbps-install -y git aria2 make
+xbps-install -y aria2 gcc
 
-for module in literal/*; do
+for module in scripts/*
+do
 	cp $module /usr/bin
 done
 
-./essential/install
+sors `dirname $0`/builders `dirname $0`/sources/pre
+sors `dirname $0`/builders `dirname $0`/sources/app
+sors `dirname $0`/builders `dirname $0`/sources/X11
 
-for module in group/*/; do
-	./$module/install
-done
-
-for module in single/*; do
-	./$module
-done
-
-echo You did it, somehow
+echo good job

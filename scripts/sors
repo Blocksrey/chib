@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+set -e
+while read address
+do
+	getto $address $1
+done < $2
