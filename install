@@ -7,15 +7,26 @@
 set -e
 cd `dirname $0`
 
-xbps-install -y aria2 gcc
+xbps-install -y aria2 gcc zlib-devel libffi-devel ninja flex obs-devel llvm autoconf xinit bspwm
 
 for module in scripts/*
 do
 	cp $module /usr/bin
 done
 
-sors `dirname $0`/builders `dirname $0`/sources/pre
-sors `dirname $0`/builders `dirname $0`/sources/app
-sors `dirname $0`/builders `dirname $0`/sources/X11
+#sors `dirname $0`/builders `dirname $0`/sources/pre
+
+for module in group/*/
+do
+	./$module/install
+done
+
+for module in single/*
+do
+	./$module
+done
+
+#sors `dirname $0`/builders `dirname $0`/sources/app
+#sors `dirname $0`/builders `dirname $0`/sources/X11
 
 echo good job

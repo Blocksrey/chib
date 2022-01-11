@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 set -e
-./configure --prefix=/usr
+./configure --prefix=/usr --disable-dependency-tracking
 ./build.sh
-./make install
+./make -j `nproc`
+./make -j `nproc` install
