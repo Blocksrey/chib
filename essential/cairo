@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-set -e
-./configure --prefix=/usr
-make $(nproc)
-make install $(nproc)

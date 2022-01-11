@@ -1,0 +1,42 @@
+#!/usr/bin/bash
+# Getto, a program fetcher and builder by @Blocksrey
+
+# Exit on error
+set -e
+
+# Get the URL destination file
+getto_dest=${1##*/}
+
+if [ ${getto_dest##*.} = git ]
+then
+	# Extensionless name
+	getto_fold=${getto_dest%.*}
+
+	# Versionless and extensionless name
+	getto_base=${getto_fold%-*}
+
+	# Fetch the file
+	git clone $1
+else
+	# Extensionless name
+	getto_fold=${getto_dest%.*}
+	getto_fold=${getto_fold%.*}
+
+	# Versionless and extensionless name
+	getto_base=${getto_fold%-*}
+
+	# Fetch the file
+	aria2c $1
+
+	# Unpack the file
+	tar xf $getto_dest
+fi
+
+# Build or do whatever
+cd $getto_fold
+../$getto_base.sh
+
+# Revert state
+cd ..
+rm $getto_fold -r
+rm $getto_dest

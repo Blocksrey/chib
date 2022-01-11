@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-set -e
-cd $(dirname $0)
-
-mkdir -p /etc/X11/xorg.conf.d
-cp 10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d

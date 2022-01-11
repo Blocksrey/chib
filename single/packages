@@ -14,28 +14,29 @@ packages=(
 	# files
 	nnn
 	nautilus
-	#rclone
+	rclone
 
 	# xorg
 	xorg-input-drivers
 	xorg-video-drivers
+	bspwm
+	sxhkd
 
 	# terminal emulator
 	alacritty
 
 	# video/audio utilities
-	#deadbeef
-	#feh
-	#pavucontrol
+	deadbeef
+	feh
+	pavucontrol
 
 	# general utilities
 	gimp
-	#lm_sensors
+	lm_sensors
 	firefox
-	#obs
-	#flameshot
+	obs
+	flameshot
 	telegram-desktop
-	aria2
 )
 
 xbps-install -y void-repo-nonfree

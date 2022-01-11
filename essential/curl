@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-./configure --prefix=/usr --with-openssl
-make -j$(nproc)
-make install -j$(nproc)
