@@ -10,7 +10,4 @@ bspc config border_width 0
 bspc config window_gap 0
 bspc config pointer_motion_interval 30
 
-intel-undervolt apply
-
-xrandr --output DP-2 &
 xrandr --output HDMI-0 --mode 1920x1080 --rate 144 &
