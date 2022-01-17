@@ -1,2 +1,2 @@
 #libdrm-devel libXfixes-devel libXrandr-devel
-xbps-install -y llvm byacc flex
+#xbps-install -y llvm byacc flex

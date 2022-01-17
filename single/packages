@@ -39,5 +39,5 @@ packages=(
 	telegram-desktop
 )
 
-xbps-install -y void-repo-nonfree
-xbps-install -yS ${packages[@]}
+#xbps-install -y void-repo-nonfree
+#xbps-install -yS ${packages[@]}
