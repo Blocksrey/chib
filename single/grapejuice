@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
 
 xbps-install -y \
@@ -17,4 +17,3 @@ sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/g
 
 cd /tmp/grapejuice
 #sudo -u $SUDO_USER ./install.py
-

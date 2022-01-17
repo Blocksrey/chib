@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
 #xbps-install -y git obs-devel
 meson build --prefix=/usr

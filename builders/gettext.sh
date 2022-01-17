@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
 ./configure --prefix=/usr --disable-static
 make -j `nproc`

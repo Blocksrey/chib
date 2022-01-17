@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Getto, a program fetcher and builder by @Blocksrey
 
 # Exit on error
@@ -25,7 +25,7 @@ else
 	getto_base=${getto_fold%-*}
 
 	# Fetch the file
-	aria2c $1
+	wget $1
 
 	# Unpack the file
 	tar xf $getto_dest

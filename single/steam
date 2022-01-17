@@ -1,5 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
-aria2c https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 dedeb steam_latest.deb
 rm steam_latest.deb

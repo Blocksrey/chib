@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 export MESA_DEBUG=1
 export EGL_LOG_LEVEL=debug
 export LIBGL_DEBUG=verbose

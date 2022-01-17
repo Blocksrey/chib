@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
 python3 -m ensurepip
 python3 -m pip install --upgrade pip

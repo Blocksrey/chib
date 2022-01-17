@@ -8,7 +8,7 @@
 -f bv+ba/best
 -S res:2160,codec:av01:opus
 
-#Use aria2c external downloader for higher speed
+#Use wget external downloader for higher speed
 --downloader aria2c
 
 #Merge
