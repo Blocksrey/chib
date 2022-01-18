@@ -1,5 +1,5 @@
 super + Return
-	alacritty
+	xterm
 
 super + @space
 	dmenu_run

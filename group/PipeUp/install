@@ -9,7 +9,8 @@ space_first() {
 }
 
 # Install required packages
-apk add pipewire pipewire-alsa wireplumber
+#apk add pipewire pipewire-alsa pipewire-pulse wireplumber
+apk add pipewire pipewire-alsa pipewire-pulse wireplumber
 
 # Copy config template to correct place
 cp -r /usr/share/pipewire /etc/pipewire
@@ -20,4 +21,6 @@ ln -sf /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
 ln -sf /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 
 # Remove leading space in pipewire config
-space_first /etc/pipewire/pipewire.conf '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }'
+#space_first /etc/pipewire/pipewire.conf '{ path = "/usr/bin/pipewire" args = "-c pipewire-pulse.conf" }'
+
+cp pipewire.conf /etc/pipewire
