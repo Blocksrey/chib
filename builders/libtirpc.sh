@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 set -e
 ./configure --prefix=/usr --disable-gssapi
 make -j `nproc`

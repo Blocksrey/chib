@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 set -e
 ./Configure -des
 make -j `nproc`

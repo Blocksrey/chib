@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 set -e
 #xbps-install -y zlib-devel
 ./configure --prefix=/usr

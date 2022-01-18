@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 # Bright by Blocksrey
 set -e
 

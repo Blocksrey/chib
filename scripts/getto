@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 # Getto, a program fetcher and builder by @Blocksrey
 
 # Exit on error
