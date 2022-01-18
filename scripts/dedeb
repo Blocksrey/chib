@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 # DeDeb, a platform agnostic deb package installer
 # @Blocksrey
 

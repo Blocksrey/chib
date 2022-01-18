@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 cd $(dirname $0)
 #xbps-install -y intel-undervolt

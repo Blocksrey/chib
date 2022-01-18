@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 
 # Source: https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/
@@ -9,7 +9,7 @@ space_first() {
 }
 
 # Install required packages
-#xbps-install -y alsa-utils pulseaudio-utils pipewire alsa-pipewire
+apk add pipewire pipewire-alsa wireplumber
 
 # Copy config template to correct place
 cp -r /usr/share/pipewire /etc/pipewire

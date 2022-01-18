@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 meson build\
 	--prefix=/usr\

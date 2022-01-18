@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 ./configure --prefix=/usr --disable-dependency-tracking
 ./build.sh

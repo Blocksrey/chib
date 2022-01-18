@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pipewire &

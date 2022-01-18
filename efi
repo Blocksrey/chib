@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 echo efivarfs /sys/firmware/efi/efivars efivarfs defaults 0 0 >> /etc/fstab
 mount -a
 #modprobe efivarfs

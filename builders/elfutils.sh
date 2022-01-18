@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 ./configure --prefix=/usr --disable-libdebuginfod --disable-debuginfod
 make -j `nproc`

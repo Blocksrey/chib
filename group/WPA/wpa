@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 cd $(dirname $0)
 
@@ -6,8 +6,4 @@ cp wpa_supplicant.conf /etc/wpa_supplicant
 wpa_passphrase $1 $2 >> /etc/wpa_supplicant/wpa_supplicant.conf
 
 ln -sf /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks
-ln -sf /etc/sv/dhcpcd /var/service
-
-rfkill unblock wlan
-
-sv restart dhcpcd
+#ln -sf /etc/sv/dhcpcd /var/service

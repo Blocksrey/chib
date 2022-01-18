@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 
 wget https://github.com/mpv-player/mpv/archive/refs/tags/v0.34.0.tar.gz

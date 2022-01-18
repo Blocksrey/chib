@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/ash
 set -e
 cd $(dirname $0)
 
 # Copy contents into user's home directory
-cp -r ./~/. $(getent passwd $SUDO_USER | cut -d: -f6)
+#cp -r ./~/. $(getent passwd $SUDO_USER | cut -d: -f6)
+cp -r ./~/. ~
