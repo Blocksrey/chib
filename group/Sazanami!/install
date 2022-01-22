@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd $(dirname $0)
+cd `dirname $0`
 
 # Create a TTF folder in fonts
 mkdir -p /usr/share/fonts/TTF

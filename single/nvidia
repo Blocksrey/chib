@@ -1,11 +1,15 @@
 #!/bin/bash
 set -e
 
-#xbps-install -y linux-headers
+# Install linux headers
+xbps-install -y linux-headers
 
+# Grab nvidia drivers
 wget https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x86_64-495.44.run -O nvidia.run
 
+# Install
 chmod +x nvidia.run
 ./nvidia.run
 
+# Clean
 rm nvidia.run

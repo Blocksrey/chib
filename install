@@ -11,7 +11,7 @@ cd `dirname $0`
 
 for module in scripts/*
 do
-	cp $module /usr/bin
+	cp $module /bin
 done
 
 sors `dirname $0`/builders `dirname $0`/sources/pre

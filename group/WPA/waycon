@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+./wpa _LinksysSetupCDB 2pvurwe8c0
