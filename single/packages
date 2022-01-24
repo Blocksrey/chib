@@ -7,6 +7,8 @@ packages=(
 	lld
 	LuaJIT
 	nodejs
+	meson
+	pkg-config
 
 	# headers/libraries
 	SDL2-devel
@@ -16,11 +18,33 @@ packages=(
 	nautilus
 	rclone
 
+	# steam
+	steam
+	glibc-32bit
+	mesa-32bit
+	nvidia-libs-32bit
+
+	wine
+	wine-32bit
+	winetricks
+
 	# xorg
+	xinit
+	xrandr
 	xorg-input-drivers
 	xorg-video-drivers
 	bspwm
 	sxhkd
+	dmenu
+
+	pulseaudio-utils
+
+	# Drivers
+	nvidia
+	nvtop
+
+	htop
+	intel-undervolt
 
 	# terminal emulator
 	alacritty
@@ -29,15 +53,19 @@ packages=(
 	deadbeef
 	feh
 	pavucontrol
+	ffmpeg
 
 	# general utilities
 	gimp
 	lm_sensors
 	firefox
+
 	obs
+	obs-devel
+
 	flameshot
 	telegram-desktop
 )
 
-xbps-install -y void-repo-nonfree
+xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 xbps-install -yS ${packages[@]}
