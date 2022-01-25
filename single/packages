@@ -9,6 +9,9 @@ packages=(
 	nodejs
 	meson
 	pkg-config
+	cmake
+	make
+	gcc
 
 	# headers/libraries
 	SDL2-devel
@@ -39,10 +42,6 @@ packages=(
 
 	pulseaudio-utils
 
-	# Drivers
-	nvidia
-	nvtop
-
 	htop
 	intel-undervolt
 
@@ -51,9 +50,11 @@ packages=(
 
 	# video/audio utilities
 	deadbeef
+	mpv
 	feh
 	pavucontrol
 	ffmpeg
+	yt-dlp
 
 	# general utilities
 	gimp

@@ -1,3 +1,0 @@
-#!/bin/bash
-set -e
-sors `dirname $0`/builders `dirname $0`/sources/nvobs

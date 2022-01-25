@@ -2,10 +2,10 @@
 set -e
 
 # Install linux headers
-xbps-install -y linux-headers
+xbps-install -y linux-headers gcc make pkg-config
 
 # Grab nvidia drivers
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x86_64-495.44.run -O nvidia.run
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/$1/NVIDIA-Linux-x86_64-$1.run -O nvidia.run
 
 # Install
 chmod +x nvidia.run

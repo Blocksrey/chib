@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+cd `dirname $0`
+./single/nvidia 510.39.01

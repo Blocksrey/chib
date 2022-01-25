@@ -1,0 +1,8 @@
+#!/bin/bash
+nvidia-uninstall
+set -e
+../nvidia-510.39.01
+NVV=`nvidia-smi --query-gpu=driver_version --format=csv,noheader`
+echo Patching Nvidia driver $NVV
+nvlax_encode -i /usr/lib/libnvidia-encode.so.$NVV -o /usr/lib/libnvidia-encode.so.$NVV
+nvlax_fbc -i /usr/lib/libnvidia-fbc.so.$NVV -o /usr/lib/libnvidia-fbc.so.$NVV
