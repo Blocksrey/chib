@@ -1,0 +1,116 @@
+10:25:55 PM.841: CPU Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+10:25:55 PM.841: CPU Speed: 2600.000MHz
+10:25:55 PM.841: Physical Cores: 6, Logical Cores: 12
+10:25:55 PM.841: Physical Memory: 15927MB Total, 2233MB Free
+10:25:55 PM.841: Kernel Version: Linux 5.15.16_1
+10:25:55 PM.842: Distribution: "void" Unknown
+10:25:55 PM.842: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.14
+10:25:55 PM.842: Portable mode: false
+10:25:55 PM.865: OBS 27.1.3 (linux)
+10:25:55 PM.865: ---------------------------------
+10:25:55 PM.865: ---------------------------------
+10:25:55 PM.865: audio settings reset:
+10:25:55 PM.865: 	samples per sec: 48000
+10:25:55 PM.865: 	speakers:        2
+10:25:55 PM.869: ---------------------------------
+10:25:55 PM.869: Initializing OpenGL...
+10:25:55 PM.911: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2
+10:25:55 PM.911: OpenGL loaded successfully, version 3.3.0 NVIDIA 510.39.01, shading language 3.30 NVIDIA via Cg compiler
+10:25:55 PM.918: ---------------------------------
+10:25:55 PM.918: video settings reset:
+10:25:55 PM.918: 	base resolution:   1920x1080
+10:25:55 PM.918: 	output resolution: 1920x1080
+10:25:55 PM.918: 	downscale filter:  Bilinear
+10:25:55 PM.918: 	fps:               60/1
+10:25:55 PM.918: 	format:            I444
+10:25:55 PM.918: 	YUV mode:          601/Partial
+10:25:55 PM.918: NV12 texture support not available
+10:25:55 PM.919: Audio monitoring device:
+10:25:55 PM.919: 	name: Default
+10:25:55 PM.919: 	id: default
+10:25:55 PM.919: ---------------------------------
+10:25:55 PM.920: Failed to load 'en-US' text for module: 'decklink-captions.so'
+10:25:55 PM.921: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+10:25:55 PM.986: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+10:25:55 PM.986: No blackmagic support
+10:25:55 PM.991: v4l2loopback not installed, virtual camera disabled
+10:25:55 PM.996: NVENC supported
+10:25:55 PM.996: FFMPEG VAAPI supported
+10:25:56 PM.000: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+10:25:56 PM.000: 
+10:25:56 PM.000: Couldn't find VLC installation, VLC video source disabled
+10:25:56 PM.000: ---------------------------------
+10:25:56 PM.000:   Loaded Modules:
+10:25:56 PM.000:     vlc-video.so
+10:25:56 PM.000:     text-freetype2.so
+10:25:56 PM.000:     rtmp-services.so
+10:25:56 PM.000:     obs-x264.so
+10:25:56 PM.000:     obs-transitions.so
+10:25:56 PM.000:     obs-outputs.so
+10:25:56 PM.000:     obs-libfdk.so
+10:25:56 PM.000:     obs-filters.so
+10:25:56 PM.000:     obs-ffmpeg.so
+10:25:56 PM.000:     nvfbc.so
+10:25:56 PM.000:     linux-v4l2.so
+10:25:56 PM.000:     linux-pulseaudio.so
+10:25:56 PM.000:     linux-jack.so
+10:25:56 PM.000:     linux-decklink.so
+10:25:56 PM.000:     linux-capture.so
+10:25:56 PM.000:     linux-alsa.so
+10:25:56 PM.000:     image-source.so
+10:25:56 PM.000:     frontend-tools.so
+10:25:56 PM.000:     decklink-ouput-ui.so
+10:25:56 PM.000:     decklink-captions.so
+10:25:56 PM.000: ---------------------------------
+10:25:56 PM.000: ==== Startup complete ===============================================
+10:25:56 PM.002: All scene data cleared
+10:25:56 PM.002: ------------------------------------------------
+10:25:56 PM.008: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.43) 15.0.0'
+10:25:56 PM.008: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+10:25:56 PM.008: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:25:56 PM.008: [Loaded global audio device]: 'Desktop Audio'
+10:25:56 PM.008: pulse-input: Server name: 'PulseAudio (on PipeWire 0.3.43) 15.0.0'
+10:25:56 PM.008: pulse-input: Audio format: s24le, 48000 Hz, 2 channels
+10:25:56 PM.008: pulse-input: Sample format s24le not supported by OBS,using float32le instead for recording
+10:25:56 PM.008: pulse-input: Started recording from 'alsa_input.usb-Blue_Microphones_Yeti_Nano_8839B12742040506-00.analog-stereo'
+10:25:56 PM.008: [Loaded global audio device]: 'Mic/Aux'
+10:25:56 PM.058: Unable to cleanup NvFBC
+10:25:56 PM.063: v4l2-input: Start capture from /dev/video0
+10:25:56 PM.160: v4l2-input: Input: 0
+10:25:56 PM.164: v4l2-input: Resolution: 1280x720
+10:25:56 PM.164: v4l2-input: Pixelformat: YUYV
+10:25:56 PM.164: v4l2-input: Linesize: 2560 Bytes
+10:25:56 PM.164: v4l2-input: Framerate: 10.00 fps
+10:25:56 PM.167: v4l2-input: /dev/video0: select timeout set to 500000us (5x frame periods)
+10:25:56 PM.167: Switched to scene 'Scene'
+10:25:56 PM.167: ------------------------------------------------
+10:25:56 PM.167: Loaded scenes:
+10:25:56 PM.167: - scene 'Scene':
+10:25:56 PM.167:     - source: 'NvFBC Source' (nvfbc-source)
+10:25:56 PM.167:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:25:56 PM.167: ------------------------------------------------
+10:25:56 PM.549: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Desktop Audio)
+10:25:56 PM.549: 
+10:26:07 PM.950: ---------------------------------
+10:26:07 PM.950: video settings reset:
+10:26:07 PM.950: 	base resolution:   1920x1080
+10:26:07 PM.950: 	output resolution: 1920x1080
+10:26:07 PM.950: 	downscale filter:  Bilinear
+10:26:07 PM.950: 	fps:               60/1
+10:26:07 PM.950: 	format:            I444
+10:26:07 PM.950: 	YUV mode:          601/Full
+10:26:07 PM.951: NV12 texture support not available
+10:26:07 PM.953: Settings changed (advanced)
+10:26:07 PM.953: ------------------------------------------------
+10:26:11 PM.332: ==== Recording Start ===============================================
+10:26:11 PM.333: Failed to inhibit: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Inhibit” on object at path /org/freedesktop/portal/desktop
+10:26:21 PM.213: Output 'adv_ffmpeg_output': stopping
+10:26:21 PM.213: Output 'adv_ffmpeg_output': Total frames output: 592
+10:26:21 PM.214: Output 'adv_ffmpeg_output': Total drawn frames: 601
+10:26:21 PM.214: ==== Recording Stop ================================================
+10:26:28 PM.092: ==== Recording Start ===============================================
+10:26:28 PM.094: Failed to inhibit: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Inhibit” on object at path /org/freedesktop/portal/desktop
+10:26:38 PM.374: Output 'adv_ffmpeg_output': stopping
+10:26:38 PM.374: Output 'adv_ffmpeg_output': Total frames output: 615
+10:26:38 PM.374: Output 'adv_ffmpeg_output': Total drawn frames: 623
+10:26:38 PM.375: ==== Recording Stop ================================================

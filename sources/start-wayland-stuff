@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 export MESA_DEBUG=1
 export EGL_LOG_LEVEL=debug
 export LIBGL_DEBUG=verbose
@@ -9,5 +9,5 @@ export WLR_NO_HARDWARE_CURSORS=1
 #sudo xbps-install -y seatd sway foot
 #sudo ln -sf /etc/sv/seatd /var/service
 
-#cd
-#sway --unsupported-gpu
+cd
+sway --unsupported-gpu

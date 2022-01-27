@@ -1,1 +1,1 @@
-{"bf":0,"keyint_sec":0,"preset":"hp","rate_control":"lossless"}
+{"bf":1,"bitrate":8000,"gpu":0,"keyint_sec":1,"preset":"mq","psycho_aq":false,"rate_control":"CBR"}
