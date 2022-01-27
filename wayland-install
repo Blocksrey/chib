@@ -7,10 +7,14 @@
 set -e
 cd `dirname $0`
 
+xbps-install -y gcc llvm flex libXext-devel libXfixes-devel libXxf86vm-devel libXrandr-devel
+
 for module in scripts/*
 do
 	cp $module /bin
 done
+
+sors `dirname $0`/builders `dirname $0`/sources/pre
 
 for module in group/*/
 do
@@ -21,5 +25,8 @@ for module in single/*
 do
 	./$module
 done
+
+sors `dirname $0`/builders `dirname $0`/sources/Wayland
+sors `dirname $0`/builders `dirname $0`/sources/app
 
 echo good job

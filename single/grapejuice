@@ -2,23 +2,23 @@
 set -e
 
 # Install prerequisites
-xbps-install -y\
-	wine\
-	winetricks\
-	python3\
-	python3-pip\
-	python3-cairo-devel\
-	gobject-introspection\
-	xdg-user-dirs\
-	xdg-utils\
-	git
+#xbps-install -y\
+#	wine\
+#	winetricks\
+#	python3\
+#	python3-pip\
+#	python3-cairo-devel\
+#	gobject-introspection\
+#	xdg-user-dirs\
+#	xdg-utils\
+#	git
 
 # Remove tmp grapejuice path if exists
-rm -fr /tmp/grapejuice
+#rm -fr /tmp/grapejuice
 
 # Clone grapejuice repo
-sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
+#sudo -u $SUDO_USER git clone https://gitlab.com/brinkervii/grapejuice.git /tmp/grapejuice
 
 # Install
-cd /tmp/grapejuice
-sudo -u $SUDO_USER ./install.py
+#cd /tmp/grapejuice
+#sudo -u $SUDO_USER ./install.py

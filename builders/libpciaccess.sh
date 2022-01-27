@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-xbps-install -y flex
-./configure --prefix=/usr
+./configure --prefix=/usr --enable-udev
 make -j `nproc`
 make -j `nproc` install
