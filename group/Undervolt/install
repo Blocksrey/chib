@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 cd `dirname $0`
-xbps-install -y intel-undervolt
-cp intel-undervolt.conf /etc
-intel-undervolt apply
+#xbps-install -y intel-undervolt
+#cp intel-undervolt.conf /etc
+#intel-undervolt apply

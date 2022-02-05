@@ -1,17 +1,17 @@
 #!/bin/bash
-nvidia-uninstall
+#nvidia-uninstall
 set -e
 
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-make -j `nproc`
-make -j `nproc` install
-cd ..
-rm -r build
+#mkdir build
+#cd build
+#cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+#make -j `nproc`
+#make -j `nproc` install
+#cd ..
+#rm -r build
 
-../../nvidia-510.39.01
-NVV=`nvidia-smi --query-gpu=driver_version --format=csv,noheader`
-echo Patching Nvidia driver $NVV
-nvlax_encode -i /usr/lib/libnvidia-encode.so.$NVV -o /usr/lib/libnvidia-encode.so.$NVV
-nvlax_fbc -i /usr/lib/libnvidia-fbc.so.$NVV -o /usr/lib/libnvidia-fbc.so.$NVV
+#../../nvidia-510.39.01
+#NVV=`nvidia-smi --query-gpu=driver_version --format=csv,noheader`
+#echo Patching Nvidia driver $NVV
+#nvlax_encode -i /usr/lib/libnvidia-encode.so.$NVV -o /usr/lib/libnvidia-encode.so.$NVV
+#nvlax_fbc -i /usr/lib/libnvidia-fbc.so.$NVV -o /usr/lib/libnvidia-fbc.so.$NVV

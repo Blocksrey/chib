@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+
+packages=(
+	# files
+	nnn
+	nautilus
+	rclone
+
+	# steam
+	steam
+	glibc-32bit
+
+	mesa-dri
+
+	wine
+	winetricks
+
+	# wayland
+	wlr-randr
+	river
+	sway
+
+	pulseaudio-utils
+	htop
+	radeontop
+
+	# terminal emulator
+	alacritty
+
+	# video/audio utilities
+	deadbeef
+	mpv
+	pavucontrol
+	ffmpeg
+	yt-dlp
+
+	# general utilities
+	gimp
+	lm_sensors
+	firefox
+	obs
+	flameshot
+	telegram-desktop
+)
+
+xbps-install -y void-repo-multilib
+xbps-install -yS ${packages[@]}

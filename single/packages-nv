@@ -24,26 +24,34 @@ packages=(
 	# steam
 	steam
 	glibc-32bit
+
+	mesa
+	mesa-dri
+
 	mesa-32bit
-	nvidia-libs-32bit
+	mesa-dri-32bit
+
+	#nvidia-libs-32bit
 
 	wine
 	wine-32bit
 	winetricks
 
+	wlr-randr
+
 	# xorg
-	xinit
-	xrandr
-	xorg-input-drivers
-	xorg-video-drivers
-	bspwm
-	sxhkd
-	dmenu
+	#xinit
+	#xrandr
+	#xorg-input-drivers
+	#xorg-video-drivers
+	#bspwm
+	#sxhkd
+	#dmenu
 
 	pulseaudio-utils
 
 	htop
-	intel-undervolt
+	#intel-undervolt
 
 	# terminal emulator
 	alacritty
@@ -51,7 +59,7 @@ packages=(
 	# video/audio utilities
 	deadbeef
 	mpv
-	feh
+	#feh
 	pavucontrol
 	ffmpeg
 	yt-dlp
@@ -68,5 +76,5 @@ packages=(
 	telegram-desktop
 )
 
-xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
-xbps-install -yS ${packages[@]}
+#xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+#xbps-install -yS ${packages[@]}
