@@ -1,0 +1,30 @@
+#Default video downloader modified from BlueSwordM and then Quaternions
+
+#Never give up! Needed for downloading long VP9 videos
+--retries infinite
+
+#Always download highest resolution up to 2160p
+#Prefer AV01 video first, then VP9, then AVC
+-f bv+ba/best
+-S res:2160,codec:av01:opus
+
+#Use wget external downloader for higher speed
+--downloader aria2c
+
+#Merge
+--merge-output-format webm
+
+#Download subtitle file(Actual subtitles)
+--write-sub
+
+#Download AI subtitles(Youtube only)
+#--write-auto-sub
+
+#Convert to SRT
+--convert-subs srt
+
+#Output File Format
+-o %(title)s.%(ext)s
+
+#Embed subtitles
+--embed-subs
