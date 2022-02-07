@@ -10,8 +10,13 @@ packages=(
 	# steam
 	steam
 	glibc-32bit
+	mesa-dri-32bit
 
+	# general graphics
 	mesa-dri
+	mesa-vulkan-radeon
+	vulkan-loader
+	linux-firmware-amd
 
 	wine
 	winetricks
@@ -20,13 +25,12 @@ packages=(
 	wlr-randr
 	river
 	sway
+	dmenu-wayland
+	foot
 
 	pulseaudio-utils
 	htop
 	radeontop
-
-	# terminal emulator
-	alacritty
 
 	# video/audio utilities
 	deadbeef
@@ -44,5 +48,5 @@ packages=(
 	telegram-desktop
 )
 
-xbps-install -y void-repo-multilib
+xbps-install -y void-repo-multilib void-repo-nonfree
 xbps-install -yS ${packages[@]}
