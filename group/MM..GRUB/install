@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 cd `dirname $0`
-cp grub-amd /etc/default/grub
+cp grub-nv /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
