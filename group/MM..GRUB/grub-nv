@@ -1,2 +1,2 @@
 GRUB_TIMEOUT=1
-GRUB_CMDLINE_LINUX_DEFAULT="nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1 loglevel=0 nvidia-drm.modeset=1 modprobe.blacklist=nouveau"
+GRUB_CMDLINE_LINUX_DEFAULT="nvidia.NVreg_RegistryDwords=EnableBrightnessControl=1 nvidia-drm.modeset=1 modprobe.blacklist=nouveau"

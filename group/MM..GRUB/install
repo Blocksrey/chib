@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 cd `dirname $0`
-cp grub-nv /etc/default/grub
+cp grub-$1 /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
