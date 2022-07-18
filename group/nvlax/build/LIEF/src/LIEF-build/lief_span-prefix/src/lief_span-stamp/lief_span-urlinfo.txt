@@ -1,0 +1,3 @@
+repository='external project URL'
+module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//tcb-span-427f6bd.zip'
+tag='SHA256=3fde1bb8be41da080d10ad18b3b7a6b1045349dc8ae64fc4380b977478ec68d3'

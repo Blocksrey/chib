@@ -1,0 +1,3 @@
+repository='external project URL'
+module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//json-3.9.1.zip'
+tag='SHA256=5db3b7b3356a0742e06b27b6ee744f8ee487ed9c0f8cf3f9778a2076e7a933ba'
