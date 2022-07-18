@@ -1,3 +1,0 @@
-repository='external project URL'
-module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//utfcpp-3.1.2.zip'
-tag='SHA256=b77bff122a6d4f2a7a1ab409086bbb59bf899a2fdde12e1a85a4305fa91764c4'

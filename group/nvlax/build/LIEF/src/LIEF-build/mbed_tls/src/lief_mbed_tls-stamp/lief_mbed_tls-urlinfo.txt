@@ -1,3 +1,0 @@
-repository='external project URL'
-module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//mbedtls-3.1.0.zip'
-tag='SHA256=8ec791eaed8332c50cade2bcc17b75ae5931ac00824a761b5aa4e7586645b72b'

@@ -1,3 +1,0 @@
-repository='external project URL'
-module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//leaf-a781140.zip'
-tag='SHA256=af980c4b5288dd78f4ac47b42899cfeb47b335cd3191f8b3cd95b67be419b941'

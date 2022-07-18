@@ -1,3 +1,0 @@
-repository='external project URL'
-module='/home/jeff/ChibiLinux/group/nvlax/build/_deps/lief_src-src/third-party//frozen-e6ddc43.zip'
-tag='SHA256=7aa0ab44eb91fc2c2431bd2e78bd3545aae750793a880064f6df0ef84c819065'
