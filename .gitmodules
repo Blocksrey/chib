@@ -1,6 +1,3 @@
-[submodule "group/group/Dottys"]
-	path = group/group/Dottys
-	url = https://github.com/Blocksrey/Dottys.git
 [submodule "group/Dottys"]
 	path = group/Dottys
-	url = https://github.com/Blocksrey/Dottys
+	url = https://github.com/blocksrey/Dottys

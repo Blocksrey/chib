@@ -1,5 +1,3 @@
-#!/bin/bash
-set -e
 ./autogen.sh\
 	--prefix=/usr\
 	--disable-docs\
@@ -10,5 +8,5 @@ set -e
 	--disable-xnest\
 	--disable-xquartz\
 	--disable-xwin
-make -j `nproc`
-make -j `nproc` install
+make
+make install

@@ -1,0 +1,2 @@
+https://github.com/illnyang/nvlax.git
+https://gitlab.com/fzwoch/obs-nvfbc.git
